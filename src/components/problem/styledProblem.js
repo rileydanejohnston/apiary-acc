@@ -23,7 +23,7 @@ export const TitleWrapper = styled.li`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: center;
+  margin-top: 56px;
 `;
 
 export const Title = styled.h2`
