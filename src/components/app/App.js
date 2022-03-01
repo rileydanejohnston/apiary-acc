@@ -1,9 +1,12 @@
+import Problem from "../problem/Problem";
 import { AppWrapper } from "./styledApp";
 
 function App() {
 
   return (
-    <AppWrapper></AppWrapper>
+    <AppWrapper>
+      <Problem />
+    </AppWrapper>
   );
 }
 
