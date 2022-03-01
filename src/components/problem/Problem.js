@@ -1,7 +1,4 @@
 import React from 'react'
-import turtlePic from '../../images/turtle.svg';
-import bottlePic from '../../images/bottles.svg';
-import trashPic from '../../images/plastic-wrappers.svg';
 import {
   ProblemWrapper,
   Grid,
@@ -18,39 +15,54 @@ import {
   Image,
   ImgCaption
 } from './styledProblem'
+import { ProblemData } from '../../constants/problem'
+const {
+  statTitle,
+  wasteStat,
+  recycleStat,
+  problemTitle,
+  subtitle,
+  images
+} = ProblemData;
 
 export default function Problem() {
   return (
     <ProblemWrapper>
       <Grid>
         <StatCell>
-          <StatTitle>Single-use plastics</StatTitle>
+          <StatTitle>{statTitle}</StatTitle>
           <CircleGraph>
-            <WasteStat>91% Waste</WasteStat>
-            <RecycleStat>9% Recycled</RecycleStat>
+            <WasteStat>{wasteStat}</WasteStat>
+            <RecycleStat>{recycleStat}</RecycleStat>
           </CircleGraph>
         </StatCell>
         <TitleWrapper>
           <Title>
-            Single-use packaging:<br/>
-            bad for the planet, bad for business
+            {problemTitle.part1}<br/>
+            {problemTitle.part2}
           </Title>
           <Subtitle>
-            Millions of tons of single-use packaging <Highlight>end up in landfills and oceans</Highlight> while only <Highlight>9% of single-use waste gets recycled. </Highlight>Meanwhile, single-use containers are expensive and restaurants need to track inventory / restock weekly.
+            {subtitle.normal1}
+            <Highlight>{subtitle.highlight1}</Highlight>
+            {subtitle.normal2}
+            <Highlight>{subtitle.highlight2}</Highlight>
+            {subtitle.normal3}
           </Subtitle>
         </TitleWrapper>
-        <Cell>
-          <Image src={turtlePic} alt='Sea Turtle' />
-          <ImgCaption>Single-use plastics pollute oceans and<br/>kill marine species</ImgCaption>
-        </Cell>
-        <Cell>
-          <Image src={bottlePic} alt='An endless sea of plastic bottles' />
-          <ImgCaption>Single-use plastics pollute landfills and<br/>emit dangerous chemicals and greenhouse gases</ImgCaption>
-        </Cell>
-        <Cell>
-          <Image src={trashPic} alt='A person standing over a table covered with plastic wrappers' />
-          <ImgCaption>Not all of the single-use plastics are recyclable</ImgCaption>
-        </Cell>
+        {
+          images.map(({ image, altText, caption }) => {
+            return (
+              <Cell>
+                <Image src={image} alt={altText} />
+                {
+                  caption.hasOwnProperty('part2') ? 
+                  <ImgCaption>{caption.part1}<br/>{caption.part2}</ImgCaption> :
+                  <ImgCaption>{caption.part1}</ImgCaption>
+                }
+              </Cell>
+            )
+          })
+        }
       </Grid>
     </ProblemWrapper>
   )
