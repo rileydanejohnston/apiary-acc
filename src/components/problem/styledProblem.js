@@ -20,9 +20,6 @@ export const Cell = styled.li`
 
 export const TitleWrapper = styled.li`
   grid-column: 2/4;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   margin-top: 56px;
 `;
 
@@ -33,6 +30,7 @@ export const Title = styled.h2`
   font-weight: 400;
   line-height: 52px;
   letter-spacing: 0em;
+  margin-bottom: 20px;
 `;
 
 export const Subtitle = styled.p`
