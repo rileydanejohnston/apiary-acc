@@ -1,8 +1,12 @@
+import Header from "../header/header";
 import { AppWrapper } from "./styledApp";
 
 function App() {
   return (
-    <AppWrapper></AppWrapper>
+    <AppWrapper>
+      <Header />
+    </AppWrapper>
+
   );
 }
 
