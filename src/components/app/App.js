@@ -1,4 +1,4 @@
-import Problem from "../problem/problem";
+import Problem from "../problem/Problem";
 import { AppWrapper } from "./styledApp";
 
 const App = () => {
