@@ -6,7 +6,7 @@ export const ProblemWrapper = styled.section`
   background: #1C383C;
 `;
 
-export const Grid = styled.ul`
+export const Grid = styled.div`
   width: 1160px;
   margin: 0 auto;
   display: grid;
@@ -15,10 +15,10 @@ export const Grid = styled.ul`
   gap: 80px 60px;
 `;
 
-export const Cell = styled.li`
+export const Cell = styled.div`
 `;
 
-export const TitleWrapper = styled.li`
+export const TitleWrapper = styled.div`
   grid-column: 2/4;
   margin-top: 56px;
 `;
@@ -46,7 +46,7 @@ export const Highlight = styled.span`
   color: #FF9820;
 `;
 
-export const StatCell = styled.li`
+export const StatCell = styled.div`
   background: #fff;
   border-radius: 20px;
   box-shadow: 0px 4px 4px 0px #00000040;
