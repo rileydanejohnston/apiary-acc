@@ -1,10 +1,11 @@
 import Header from "../header/header";
 import { AppWrapper } from "./styledApp";
+import { headerLinks } from '../../constants/headerConstants';
 
 function App() {
   return (
     <AppWrapper>
-      <Header />
+      <Header headerLinks={headerLinks} />
     </AppWrapper>
 
   );

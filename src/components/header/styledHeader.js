@@ -5,22 +5,20 @@ import { WorkWithUs } from '../sharedComponents/sharedComponents';
 export const HeaderSection = styled.header`
     height: 80px;
     display: flex;
-    flex-direction row;
     justify-content: space-between;
 `
 export const HeaderLeft = styled.div`
     margin-left: 20.5px;
     display: flex;
-    flex-direction: row;
     align-items: center;
 `
-export const HeaderLogo = styled.img`
+export const HeaderLogo = styled.div`
     width: 92px;
     height: 52px;
-    background: inherit;
+    background-image: url(${props => props.image});
+    }
 `
 export const HeaderTitle = styled.p`
-    font-family: Spline Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -33,7 +31,6 @@ export const HeaderRight = styled.nav`
 `
 // make this styled Link when you get chance
 export const HeaderLink = styled.a`
-    font-family: Spline Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -42,7 +39,7 @@ export const HeaderLink = styled.a`
     margin-right: 30px;
     cursor: pointer;
 
-    last-of-type {
+    &:last-of-type {
         margin-right: 40px;
     }
 `
