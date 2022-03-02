@@ -1,10 +1,12 @@
+import Problem from "../problem/problem";
 import { AppWrapper } from "./styledApp";
 
-function App() {
-
+const App = () => {
   return (
-    <AppWrapper></AppWrapper>
-  );
+    <AppWrapper>
+      <Problem />
+    </AppWrapper>
+  )
 }
 
-export default App;
+export default App
