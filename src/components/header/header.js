@@ -2,9 +2,9 @@ import { HeaderLeft, HeaderLink, HeaderLogo, HeaderRight, HeaderSection, HeaderT
 import logo from '../../images/logo.png';
 import logoT from '../../images/logoTipped.png';
 import { useState } from 'react';
-import { PromiseProvider } from "mongoose";
+import { headerLinks } from '../../constants/headerConstants';
 
-const Header = (props) => {
+const Header = () => {
 
     const [image, setImage] = useState(logo);
 
@@ -18,7 +18,7 @@ const Header = (props) => {
                 <HeaderTitle>Awesome Container Company</HeaderTitle>
             </HeaderLeft>
             <HeaderRight>
-                {props.headerLinks.map((link) => {
+                {headerLinks.map((link) => {
                     return (
                         <HeaderLink
                             to={link.id}>
