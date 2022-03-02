@@ -25,7 +25,7 @@ const {
   images
 } = ProblemData;
 
-export default function Problem() {
+const Problem = () => {
   return (
     <ProblemWrapper>
       <Grid>
@@ -67,3 +67,5 @@ export default function Problem() {
     </ProblemWrapper>
   )
 }
+
+export default Problem
