@@ -14,8 +14,7 @@ export const Title = styled.h1`
     font-style: normal;
     font-weight: normal;
     font-size: 44px;
-    line-height: 48px;
-    color: #1C383C;
+    line-height: 1.09;
 `
 export const TitleSpan = styled.span`
     color: #FF9820;
@@ -42,7 +41,7 @@ export const HomePicText = styled.p`
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    color: #1C383C;
+    margin-top: 13px;
 `
 export const HomeMessage = styled.div`
     width: 36%;

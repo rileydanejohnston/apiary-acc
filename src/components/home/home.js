@@ -5,7 +5,7 @@ const Home = () => {
 
     return (
         <HomeSection>
-            <Title>Help our environment by eliminating single-use plastics from your delivery with<br />
+            <Title>Help our environment by eliminating <br /> single-use plastics from your delivery with<br />
                 <TitleSpan>Awesome Container Company</TitleSpan>
             </Title>
             <HomeGraphics>
