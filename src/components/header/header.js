@@ -1,20 +1,31 @@
 import { HeaderLeft, HeaderLink, HeaderLogo, HeaderRight, HeaderSection, HeaderTitle, HeaderWork } from "./styledHeader"
+import logo from '../../images/logo.svg';
+import logoT from '../../images/logoTipped.svg';
+import { useState } from 'react';
+import { headerLinks } from '../../constants/headerConstants';
 
 const Header = () => {
+
+    const [image, setImage] = useState(logo);
 
     return (
         <HeaderSection>
             <HeaderLeft>
-                <HeaderLogo />
+                <HeaderLogo
+                    image={image}
+                    onMouseEnter={() => setImage(logoT)}
+                    onMouseLeave={() => setImage(logo)} />
                 <HeaderTitle>Awesome Container Company</HeaderTitle>
             </HeaderLeft>
             <HeaderRight>
-                <HeaderLink>The Problem</HeaderLink>
-                <HeaderLink>Sustainable Solution</HeaderLink>
-                <HeaderLink>Impact</HeaderLink>
-                <HeaderLink>Pricing</HeaderLink>
-                <HeaderLink>Team</HeaderLink>
-                <HeaderLink>Contacts</HeaderLink>
+                {headerLinks.map((link) => {
+                    return (
+                        <HeaderLink
+                            href={link.id}>
+                            {link.name}
+                        </HeaderLink>
+                    )
+                })}
                 <HeaderWork>Work with us</HeaderWork>
             </HeaderRight>
         </HeaderSection>
