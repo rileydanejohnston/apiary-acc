@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { WorkWithUs } from '../sharedComponents/sharedComponents';
 
 export const HeaderSection = styled.header`
@@ -29,7 +28,6 @@ export const HeaderRight = styled.nav`
     margin: auto 40px auto auto;
     align-items: center;
 `
-// make this styled Link when you get chance
 export const HeaderLink = styled.a`
     font-style: normal;
     font-weight: normal;

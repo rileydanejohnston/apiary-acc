@@ -1,6 +1,6 @@
 import { HeaderLeft, HeaderLink, HeaderLogo, HeaderRight, HeaderSection, HeaderTitle, HeaderWork } from "./styledHeader"
-import logo from '../../images/logo.png';
-import logoT from '../../images/logoTipped.png';
+import logo from '../../images/logo.svg';
+import logoT from '../../images/logoTipped.svg';
 import { useState } from 'react';
 import { headerLinks } from '../../constants/headerConstants';
 
@@ -21,7 +21,7 @@ const Header = () => {
                 {headerLinks.map((link) => {
                     return (
                         <HeaderLink
-                            to={link.id}>
+                            href={link.id}>
                             {link.name}
                         </HeaderLink>
                     )
