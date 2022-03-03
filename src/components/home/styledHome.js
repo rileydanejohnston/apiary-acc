@@ -9,7 +9,7 @@ export const HomeSection = styled.section`
 `
 
 export const Title = styled.h1`
-    max-width: 59.65vw;
+    max-width: 63.46%;
     margin-bottom: 85px;
     font-style: normal;
     font-weight: normal;
@@ -25,11 +25,11 @@ export const HomeGraphics = styled.div`
     justify-content: space-between;
 `
 export const HomePicContainer = styled.div`
-    max-width: 43.6vw;
+    max-width: 46.39%;
 `
 export const HomePic = styled.img`
     width: 100%;
-    height: 98.7%;
+    height: 98.6%;
     border-radius: 20px;
 `
 export const HomePicTextContainer = styled.div`
