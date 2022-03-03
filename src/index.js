@@ -3,14 +3,11 @@ import ReactDOM from 'react-dom';
 import App from './components/app/App';
 import { GlobalStyle } from './components/global/styledGlobal';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <GlobalStyle />
-      <App />
-    </HashRouter>
+    <GlobalStyle />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
