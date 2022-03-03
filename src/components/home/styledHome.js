@@ -9,9 +9,8 @@ export const HomeSection = styled.section`
 `
 
 export const Title = styled.h1`
-    width: 60%;
+    width: 59.65vw;
     margin-bottom: 85px;
-    font-family: Spline Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 44px;
@@ -23,11 +22,11 @@ export const TitleSpan = styled.span`
 `
 export const HomeGraphics = styled.div`
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 `
 export const HomePicContainer = styled.div`
-    width: 46%;
+    width: 43.6vw;
+    max-height: 352px;
 `
 export const HomePic = styled.img`
     width: 100%;
@@ -39,7 +38,6 @@ export const HomePicTextContainer = styled.div`
     justify-content: space-between;
 `
 export const HomePicText = styled.p`
-    font-family: Spline Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

@@ -5,12 +5,12 @@ const Home = () => {
 
     return (
         <HomeSection>
-            <Title>Help our environment by eliminating single-use plastics from your delivery with
-                <TitleSpan> Awesome Container Company</TitleSpan>
+            <Title>Help our environment by eliminating single-use plastics from your delivery with<br />
+                <TitleSpan>Awesome Container Company</TitleSpan>
             </Title>
             <HomeGraphics>
                 <HomePicContainer>
-                    <HomePic src={trash} />
+                    <HomePic src={trash} alt='trash' />
                     <HomePicTextContainer>
                         <HomePicText>Now</HomePicText>
                         <HomePicText>With Awesome Containers</HomePicText>
