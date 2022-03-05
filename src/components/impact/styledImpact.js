@@ -70,7 +70,6 @@ export const BoxDiamond = styled.img`
 // `
 export const Table = styled.table`
     width: 83.33%;
-    height: 654px;
     margin: 60px auto 0 auto;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
@@ -78,8 +77,8 @@ export const Table = styled.table`
 export const Row = styled.tr`
 `
 export const TableHead = styled.th`
-    width: 16.67%;
-    height: 12.23%;
+    width: 16.82%;
+    height: 80px;
     border-bottom: 1px solid gray;
     border-right: 1px solid gray;
 
@@ -88,8 +87,8 @@ export const TableHead = styled.th`
     }
 `
 export const TableData = styled.td`
-    width: 16.67%;
-    height: 12.53%;
+    width: 16.82%;
+    max-height: 82px;
     border-right: 1px solid gray;
     border-bottom: ${props => props.border ? 'none' : '1px solid gray'};
     text-align: ${props => props.left ? null : 'center'};
@@ -99,7 +98,7 @@ export const TableData = styled.td`
     }
 `
 export const TableText = styled.p`
-    margin: ${props => props.left ? '20px' : null};
+    margin: ${props => props.left ? '18.5px' : null};
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
