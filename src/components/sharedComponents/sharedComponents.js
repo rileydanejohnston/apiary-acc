@@ -17,3 +17,10 @@ export const WorkWithUs = styled.button`
         background-color: #E78819;
     }
 `
+export const SectionTitle = styled.h2`
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 52px;
+    text-align: center;
+`

@@ -1,5 +1,6 @@
 import Header from "../header/header";
 import Home from "../home/home";
+import Impact from "../impact/Impact";
 import Problem from "../problem/Problem";
 import { AppWrapper } from "./styledApp";
 
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <Home />
       <Problem />
+      <Impact />
     </AppWrapper>
   );
 }
