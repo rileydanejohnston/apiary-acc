@@ -19,18 +19,25 @@ import {
   Title,
   TitlesGroup
 } from './styledSustainable'
+import { SustainableData } from '../../constants/sustainableConstants'
+const {
+  title,
+  subtitle,
+  logisticText,
+  supplyText,
+  storageText
+} = SustainableData
 
 const Sustainable = () => {
-  
 
   return (
     <SustainableWrapper>
       <SustainableContent>
         <TitlesGroup>
-          <Title>Sustainability Delivered</Title>
+          <Title>{title}</Title>
           <Subtitle>
-            <Highlight>Awesome Container Company </Highlight>
-            replaces single-use packaging with reusable stainless steel containers
+            <Highlight>{subtitle.highlight}</Highlight>
+            {subtitle.normal}
           </Subtitle>
         </TitlesGroup>
         <Carousel >
@@ -41,19 +48,15 @@ const Sustainable = () => {
         <BenefitsSection>
           <LogisticsGroup>
             <ContainerImg />
-            <BenefitText>Backend logistics support</BenefitText>
+            <BenefitText>{logisticText}</BenefitText>
           </LogisticsGroup>
           <SupplyGroup>
             <Circle />
-            <BenefitText>
-              Save at least 50% on supply cost and time on inventory tracking/re-orders
-            </BenefitText>
+            <BenefitText>{supplyText}</BenefitText>
           </SupplyGroup>
           <StorageGroup>
             <Circle />
-            <BenefitText>
-            Save storage space while removing tons of waste from our oceans and landfills
-            </BenefitText>
+            <BenefitText>{storageText}</BenefitText>
           </StorageGroup>
         </BenefitsSection>
       </SustainableContent>
