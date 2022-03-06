@@ -17,3 +17,11 @@ export const WorkWithUs = styled.button`
         background-color: #E78819;
     }
 `
+
+export const Highlight = styled.span`
+  color: #FF9820;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+`;

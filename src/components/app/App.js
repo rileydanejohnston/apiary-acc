@@ -1,6 +1,7 @@
 import Header from "../header/header";
 import Home from "../home/home";
 import Problem from "../problem/Problem";
+import Sustainable from "../sustainable/Sustainable";
 import { AppWrapper } from "./styledApp";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <Home />
       <Problem />
+      <Sustainable />
     </AppWrapper>
   );
 }
