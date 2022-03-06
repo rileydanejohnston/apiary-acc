@@ -1,16 +1,11 @@
 import React from 'react'
 import { Highlight } from '../sharedComponents/sharedComponents'
-import arrowLeft from '../../images/arrow-left.svg'
-import arrowRight from '../../images/arrow-right.svg'
 import {
   BenefitsSection,
   BenefitText,
-  Carousel,
-  CarouselButton,
   Circle,
   ContainerImg,
   LogisticsGroup,
-  Slide,
   StorageGroup,
   Subtitle,
   SupplyGroup,
@@ -20,6 +15,7 @@ import {
   TitlesGroup
 } from './styledSustainable'
 import { SustainableData } from '../../constants/sustainableConstants'
+import Carousel from '../carousel/Carousel'
 const {
   title,
   subtitle,
@@ -40,11 +36,7 @@ const Sustainable = () => {
             {subtitle.normal}
           </Subtitle>
         </TitlesGroup>
-        <Carousel >
-          <CarouselButton image={arrowLeft} />
-          <Slide/>
-          <CarouselButton image={arrowRight} />
-        </Carousel>
+        <Carousel />
         <BenefitsSection>
           <LogisticsGroup>
             <ContainerImg />
