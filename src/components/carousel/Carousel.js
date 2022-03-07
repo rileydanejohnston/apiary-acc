@@ -15,6 +15,13 @@ const Carousel = () => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel();
 
+  // loop: if you're on slide 3/3, clicking next goes to 1/3
+  // default speed is 10
+  useEmblaCarousel.globalOptions = { 
+    loop: true,
+    speed: 8,
+  }
+
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);

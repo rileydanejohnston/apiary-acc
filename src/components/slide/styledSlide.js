@@ -5,6 +5,8 @@ export const SlideWrapper = styled.div`
   background: #fff;
   box-shadow: 0px 2px 10px 0px #00000033;
   flex: 0 0 100%;
+  position: relative;
+  margin-right: 20px;
 
   display: flex;
   gap: 6.6%;            /* 80px gap / 1212px width */
