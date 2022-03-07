@@ -21,7 +21,8 @@ const Header = () => {
                 {headerLinks.map((link) => {
                     return (
                         <HeaderLink
-                            href={link.id}>
+                            href={link.id}
+                            key={headerLinks.indexOf(link)}>
                             {link.name}
                         </HeaderLink>
                     )

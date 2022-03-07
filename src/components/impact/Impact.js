@@ -1,15 +1,15 @@
 import { SectionTitle } from "../sharedComponents/sharedComponents"
-import { Box, BoxDiamond, BoxText, BoxTitle, BoxWrapper, ImpactWrapper, Row, Table, TableData, TableHead, TablePic, TableText } from "./styledImpact"
+import { Box, BoxDiamond, BoxText, BoxTitle, BoxWrapper, Grid, GridCell, GridPic, GridText, ImpactWrapper, Row, Table, TableData, TableHead, TablePic, TableText } from "./styledImpact"
 import { ImpactData } from "../../constants/impact";
 const {
     diamond,
     boxes,
     table
 } = ImpactData;
-const {
-    headers,
-    rows
-} = table;
+// const {
+//     headers,
+//     rows
+// } = table;
 
 const Impact = () => {
 
@@ -32,8 +32,46 @@ const Impact = () => {
                 })
                 }
             </BoxWrapper>
-            <SectionTitle>The Competition is no match</SectionTitle>
-            <Table>
+            <SectionTitle>The competition is no match</SectionTitle>
+            <Grid>
+                {table.map((cell) => {
+                    if (cell.hasOwnProperty('pic')) {
+                        return (
+                            <GridCell
+                                key={table.indexOf(cell)}
+                                right={cell.right}
+                                bottom={cell.bottom}
+                                top={cell.top}>
+                                <GridPic src={cell.pic} />
+                            </GridCell>
+                        )
+                    }
+                    else if (cell.hasOwnProperty('content')) {
+                        return (
+                            <GridCell
+                                key={table.indexOf(cell)}
+                                right={cell.right}
+                                bottom={cell.bottom}
+                                top={cell.top}>
+                                <GridText
+                                    top={cell.top}
+                                    orange={cell.color}>
+                                    {cell.content}</GridText>
+                            </GridCell>
+                        )
+                    }
+                })}
+            </Grid>
+        </ImpactWrapper>
+    )
+}
+
+export default Impact;
+
+// In case we decide to go back to a table at some point
+// although that is unlikely
+
+{/* <Table>
                 <Row>
                     <TableHead>
                         <TablePic src={headers[0].content} />
@@ -48,7 +86,7 @@ const Impact = () => {
                 </Row>
                 {rows.map((row) => {
                     return (
-                        <Row>
+                        <Row id={rows.indexOf(row)}>
                             <TableData
                                 border={row[0].border}
                                 left={row[0].left}>
@@ -66,9 +104,4 @@ const Impact = () => {
                         </Row>
                     )
                 })}
-            </Table>
-        </ImpactWrapper>
-    )
-}
-
-export default Impact;
+            </Table> */}
