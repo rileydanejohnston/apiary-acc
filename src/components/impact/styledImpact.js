@@ -60,7 +60,7 @@ export const GridCell = styled.div`
     border-right: ${props => props.right ? 'none' : '1px solid gray'};
     border-bottom: ${props => props.bottom ? 'none' : '1px solid gray'};
     max-width: 200px;
-    height: ${props => props.top ? '80px' : '82px'};
+    height: 82px;
     display: flex;
     padding: ${props => props.top ? null : '20px'};
     align-items: center;

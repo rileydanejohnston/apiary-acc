@@ -6,10 +6,6 @@ const {
     boxes,
     table
 } = ImpactData;
-// const {
-//     headers,
-//     rows
-// } = table;
 
 const Impact = () => {
 
