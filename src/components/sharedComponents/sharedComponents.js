@@ -17,6 +17,7 @@ export const WorkWithUs = styled.button`
         background-color: #E78819;
     }
 `
+<<<<<<< HEAD
 export const SectionTitle = styled.h2`
     font-style: normal;
     font-weight: normal;
@@ -24,3 +25,13 @@ export const SectionTitle = styled.h2`
     line-height: 52px;
     text-align: center;
 `
+=======
+
+export const Highlight = styled.span`
+  color: #FF9820;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+`;
+>>>>>>> 65d67fbad25ba836110944a5d4a8c2e5944942c8

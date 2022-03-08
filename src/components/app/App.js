@@ -2,6 +2,7 @@ import Header from "../header/header";
 import Home from "../home/home";
 import Impact from "../impact/Impact";
 import Problem from "../problem/Problem";
+import Sustainable from "../sustainable/Sustainable";
 import { AppWrapper } from "./styledApp";
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <Home />
       <Problem />
       <Impact />
+      <Sustainable />
     </AppWrapper>
   );
 }
