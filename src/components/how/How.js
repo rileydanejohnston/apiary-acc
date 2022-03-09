@@ -20,44 +20,46 @@ import {
   BottomLeftArrow,
 
 } from './styledHow'
+import { HowData } from '../../constants/howConst'
+const {
+  title,
+  step1,
+  step2,
+  step3,
+  step4,
+  highlighter,
+  buttonText
+} = HowData;
 
 const How = () => {
   return (
     <HowWrapper>
       <HowContent>
-        <HowTitle>How it works?</HowTitle>
+        <HowTitle>{title}</HowTitle>
         <StepsWrapper>
           <StepGroup>
             <Phone />
-            <StepText>
-              {`01.\nRestaurants request reusable\ncontainers via app`}
-            </StepText>
+            <StepText>{step1}</StepText>
           </StepGroup>
-          <Highlighter>Circular ecosystem</Highlighter>
+          <Highlighter>{highlighter}</Highlighter>
           <StepGroup>
             <Containers />
-            <StepText>
-              {`03.\nPick up used containers from users\nvia app`}
-            </StepText>
+            <StepText>{step3}</StepText>
           </StepGroup>
           <StepGroupTruck>
             <Truck />
-            <StepText>
-              {`02.\nDeliver containers\nto restaurants`}
-            </StepText>
+            <StepText>{step2}</StepText>
           </StepGroupTruck>
           <StepGroupStars>
             <Stars/>
-            <StepText>
-              {`04.\nWash containers\nat commercial facility`}
-            </StepText>
+            <StepText>{step4}</StepText>
           </StepGroupStars>
           <TopLeftArrow />
           <TopRightArrow />
           <BottomRightArrow />
           <BottomLeftArrow />
         </StepsWrapper>
-        <WorkButton>Work With Us</WorkButton>
+        <WorkButton>{buttonText}</WorkButton>
       </HowContent>
     </HowWrapper>
   )
