@@ -5,10 +5,10 @@ import phoneImg from '../../images/phone.svg';
 import containerImg from '../../images/used-containers.svg';
 import truckImg from '../../images/truck.svg';
 import starsImg from '../../images/stars.svg';
-import upLeftImg from '../../images/up-left-arrow.svg'
-import downRightImg from '../../images/down-right-arrow.svg'
-import downLeftImg from '../../images/down-left-arrow.svg'
-import upRightImg from '../../images/up-right-arrow.svg'
+import bottomLeftImg from '../../images/up-left-arrow.svg'
+import topRightImg from '../../images/down-right-arrow.svg'
+import bottomRightImg from '../../images/down-left-arrow.svg'
+import topLeftImg from '../../images/up-right-arrow.svg'
 
 export const HowWrapper = styled.section`
   padding: 80px 0 104px 0;
@@ -103,28 +103,28 @@ export const ArrowBase = styled.div`
   position: absolute;
 `;
 
-export const StarArrowUp = styled(ArrowBase)`
-  right: 22px;
-  top: calc(-46px - 36px);  /* 46 height of arrow, 36 is margin */
-  background: center / cover no-repeat url(${upRightImg});
+export const TopLeftArrow = styled(ArrowBase)`
+  left: 27.82%;    /* 345 /  1240 */
+  top: 80px;  
+  background: center / cover no-repeat url(${topLeftImg});
 `;
 
-export const StarArrowDown = styled(ArrowBase)`
-  right: 22px;
-  bottom: calc(-46px - 55px);  /* 46 height of arrow, 55 is margin */
-  background: center / cover no-repeat url(${upLeftImg});
+export const BottomLeftArrow = styled(ArrowBase)`
+  left: 27.82%;    /* 345 /  1240 */
+  bottom: 165px;
+  background: center / cover no-repeat url(${bottomLeftImg});
 `;
 
-export const TruckArrowUp = styled(ArrowBase)`
-  top: calc(-46px - 36px);  /* 46 height of arrow, 36 is margin */
-  left: 42px;
-  background: center / cover no-repeat url(${downRightImg});
+export const TopRightArrow = styled(ArrowBase)`
+  top: 80px;
+  right: 26.61%;      /* 330 / 1240 */
+  background: center / cover no-repeat url(${topRightImg});
 `;
 
-export const TruckArrowDown = styled(ArrowBase)`
-  left: 42px;
-  bottom: calc(-46px - 61px);  /* 46 height of arrow, 61 is margin */
-  background: center / cover no-repeat url(${downLeftImg});
+export const BottomRightArrow = styled(ArrowBase)`
+  bottom: 165px;
+  right: 26.61%;      /* 330 / 1240 */
+  background: center / cover no-repeat url(${bottomRightImg});
 `;
 
 export const WorkButton = styled(WorkWithUs)`
