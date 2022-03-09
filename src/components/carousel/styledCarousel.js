@@ -9,6 +9,7 @@ export const CarouselWrapper = styled.div`
 export const ViewPort = styled.div`
   overflow: hidden;
   width: 90.45%;       /* 1212 width / 1340 width */
+  box-shadow: 0px 2px 10px 0px #00000033;
 `;
 
 export const SlideContainer = styled.div`
