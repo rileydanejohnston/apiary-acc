@@ -2,7 +2,7 @@ import { HeaderLeft, HeaderLink, HeaderLogo, HeaderRight, HeaderSection, HeaderT
 import logo from '../../images/logo.svg';
 import logoT from '../../images/logoTipped.svg';
 import { useState } from 'react';
-import { headerLinks } from '../../constants/headerConstants';
+import { headerLinks } from '../../constants/header';
 
 const Header = () => {
 
@@ -21,7 +21,8 @@ const Header = () => {
                 {headerLinks.map((link) => {
                     return (
                         <HeaderLink
-                            href={link.id}>
+                            href={link.id}
+                            key={headerLinks.indexOf(link)}>
                             {link.name}
                         </HeaderLink>
                     )
