@@ -1,3 +1,4 @@
+import Footer from "../footer/Footer";
 import Header from "../header/header";
 import Home from "../home/home";
 import Impact from "../impact/Impact";
@@ -13,6 +14,7 @@ const App = () => {
       <Problem />
       <Impact />
       <Sustainable />
+      <Footer />
     </AppWrapper>
   );
 }
