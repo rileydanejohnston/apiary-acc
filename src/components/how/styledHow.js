@@ -2,7 +2,7 @@ import styled from "styled-components/macro";
 import { WorkWithUs } from '../sharedComponents/sharedComponents';
 import { Highlight } from '../sharedComponents/sharedComponents'
 import phoneImg from '../../images/phone.svg';
-import containerImg from '../../images/used-containers.svg';
+import containerImg from '../../images/container-monster.svg';
 import truckImg from '../../images/truck.svg';
 import starsImg from '../../images/stars.svg';
 import bottomLeftImg from '../../images/up-left-arrow.svg'
@@ -11,7 +11,7 @@ import bottomRightImg from '../../images/down-left-arrow.svg'
 import topLeftImg from '../../images/up-right-arrow.svg'
 
 export const HowWrapper = styled.section`
-  padding: 80px 0 104px 0;
+  padding: 80px 0 100px 0;
 `;
 
 export const HowContent = styled.div`
@@ -26,18 +26,18 @@ export const HowTitle = styled.h2`
   font-weight: 400;
   line-height: 52px;
   letter-spacing: 0em;
-  margin-bottom: 98px;
+  margin-bottom: 42px;
 `;
 
 export const Highlighter = styled(Highlight)`
-  margin-bottom: 22px;
+  margin-top: 20px;
   line-height: 21px;
 `;
 
 export const StepsWrapper = styled.div`
   margin-bottom: 80px;
   position: relative;
-  height: 640px;
+  height: 695px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,44 +48,47 @@ export const StepGroup = styled.div`
   width: 33.79%;      /* 420 / 1240 */
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
 `;
 
 export const StepGroupTruck = styled(StepGroup)`
   position: absolute;
   right: 0;
-  top: 163px;
+  top: 218px;
 `;
 
 export const StepGroupStars = styled(StepGroup)`
   position: absolute;
   left: 0;
-  top: 163px;
+  top: 218px;
 `;
 
 export const Phone = styled.div`
-  width: 40px;
-  height: 73px;
+  width: 121.5px;
+  height: 140px;
   background: center / cover no-repeat url(${phoneImg});
+  margin-bottom: 18px;
 `;
 
 export const Containers = styled.div`
-  width: 128.71px;
-  height: 76px;
-  background: center / cover no-repeat url(${containerImg});    
+  width: 123.5px;
+  height: 121.3px;
+  background: center / cover no-repeat url(${containerImg});
+  margin-bottom: 26.7px; 
 `;
 
 export const Truck = styled.div`
   width: 123.5px;
   height: 92px;
-  background: center / cover no-repeat url(${truckImg});    
+  background: center / cover no-repeat url(${truckImg});
+  margin-bottom: 30px; 
 `;
 
 export const Stars = styled.div`
-  width: 82px;
-  height: 94.38px;
-  background: center / cover no-repeat url(${starsImg});    
+  width: 114px;
+  height: 114px;
+  background: center / cover no-repeat url(${starsImg});
+  margin-bottom: 7px;
 `;
 
 export const StepText = styled.p`
@@ -104,8 +107,8 @@ export const ArrowBase = styled.div`
 `;
 
 export const TopLeftArrow = styled(ArrowBase)`
+  top: 136px;
   left: 27.82%;    /* 345 /  1240 */
-  top: 80px;  
   background: center / cover no-repeat url(${topLeftImg});
 `;
 
@@ -116,14 +119,14 @@ export const BottomLeftArrow = styled(ArrowBase)`
 `;
 
 export const TopRightArrow = styled(ArrowBase)`
-  top: 80px;
+  top: 136px;
   right: 26.61%;      /* 330 / 1240 */
   background: center / cover no-repeat url(${topRightImg});
 `;
 
 export const BottomRightArrow = styled(ArrowBase)`
-  bottom: 165px;
   right: 26.61%;      /* 330 / 1240 */
+  bottom: 165px;
   background: center / cover no-repeat url(${bottomRightImg});
 `;
 
@@ -135,4 +138,5 @@ export const WorkButton = styled(WorkWithUs)`
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em;
+  border-radius: 3px;
 `;
