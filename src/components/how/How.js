@@ -14,10 +14,7 @@ import {
   Truck,
   Stars,
   StepGroupStars,
-  TopLeftArrow,
-  TopRightArrow,
-  BottomRightArrow,
-  BottomLeftArrow,
+  Arrow,
 
 } from './styledHow'
 import { HowData } from '../../constants/howConst'
@@ -54,10 +51,10 @@ const How = () => {
             <Stars/>
             <StepText>{step4}</StepText>
           </StepGroupStars>
-          <TopLeftArrow />
-          <TopRightArrow />
-          <BottomRightArrow />
-          <BottomLeftArrow />
+          <Arrow top='136px' left='27.82%' deg='0deg'/>
+          <Arrow top='136px' left='69.35%' deg='90deg'/>
+          <Arrow top='480px' left='69.35%' deg='180deg'/>
+          <Arrow top='480px' left='27.82%' deg='270deg'/>
         </StepsWrapper>
         <WorkButton>{buttonText}</WorkButton>
       </HowContent>

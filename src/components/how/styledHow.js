@@ -5,9 +5,6 @@ import phoneImg from '../../images/phone.svg';
 import containerImg from '../../images/container-monster.svg';
 import truckImg from '../../images/truck.svg';
 import starsImg from '../../images/stars.svg';
-import bottomLeftImg from '../../images/up-left-arrow.svg'
-import topRightImg from '../../images/down-right-arrow.svg'
-import bottomRightImg from '../../images/down-left-arrow.svg'
 import topLeftImg from '../../images/up-right-arrow.svg'
 
 export const HowWrapper = styled.section`
@@ -106,28 +103,15 @@ export const ArrowBase = styled.div`
   position: absolute;
 `;
 
-export const TopLeftArrow = styled(ArrowBase)`
-  top: 136px;
-  left: 27.82%;    /* 345 /  1240 */
+export const Arrow = styled(ArrowBase)`
   background: center / cover no-repeat url(${topLeftImg});
-`;
+  position: absolute;
+  top: ${(props) => (props.top)};
+  left: ${(props) => (props.left)};
+  transform: rotate(${(props) => (props.deg)});
 
-export const BottomLeftArrow = styled(ArrowBase)`
-  left: 27.82%;    /* 345 /  1240 */
-  bottom: 165px;
-  background: center / cover no-repeat url(${bottomLeftImg});
-`;
-
-export const TopRightArrow = styled(ArrowBase)`
-  top: 136px;
-  right: 26.61%;      /* 330 / 1240 */
-  background: center / cover no-repeat url(${topRightImg});
-`;
-
-export const BottomRightArrow = styled(ArrowBase)`
-  right: 26.61%;      /* 330 / 1240 */
-  bottom: 165px;
-  background: center / cover no-repeat url(${bottomRightImg});
+  /*  345 /  1240  = 27.82%  */
+  /*  860 /  1240  = 69.35%  */
 `;
 
 export const WorkButton = styled(WorkWithUs)`
