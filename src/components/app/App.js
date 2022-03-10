@@ -1,3 +1,4 @@
+import Esg from "../esg/Esg";
 import Header from "../header/header";
 import Home from "../home/home";
 import Impact from "../impact/Impact";
@@ -13,6 +14,7 @@ const App = () => {
       <Problem />
       <Impact />
       <Sustainable />
+      <Esg />
     </AppWrapper>
   );
 }
