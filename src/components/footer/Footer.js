@@ -1,11 +1,8 @@
-import { Block, BlockText, BlockTitle, FooterBlocks, FooterBottom, FooterWrapper, ImgBackground, Link, LinkImg, LinkWrapper, TextBlock, TextLine, TextLineS, TextWrapper } from "./styledFooter"
+import { Block, BlockTitle, FooterBlocks, FooterBottom, FooterWrapper, ImgBackground, Link, LinkImg, LinkWrapper, TextBlock, TextLine } from "./styledFooter"
 import { FooterData } from '../../constants/footer';
-import insta from '../../images/instagram.svg';
-import twitter from '../../images/twitter.svg';
 
 const {
-    blocks,
-    links
+    blocks
 } = FooterData;
 
 const Footer = () => {
@@ -20,12 +17,9 @@ const Footer = () => {
                                 <BlockTitle>{data.title}</BlockTitle>
                                 <TextBlock>
                                     <TextLine margin={data.margin}>{data.text1}</TextLine>
-                                    <TextLine>{data.text2}</TextLine>
                                 </TextBlock>
                                 <TextBlock>
-                                    <TextLine $size={data.size}>{data.text3}</TextLine>
-                                    <TextLine $size={data.size}>{data.text4}</TextLine>
-                                    <TextLine $size={data.size}>{data.text5}</TextLine>
+                                    <TextLine $size={data.size}>{data.text2}</TextLine>
                                 </TextBlock>
                             </Block>
                         )
@@ -37,18 +31,10 @@ const Footer = () => {
                             <TextBlock>
                                 <LinkWrapper>
                                     <ImgBackground>
-                                        <LinkImg src={insta} />
+                                        <LinkImg src={data.img1} />
                                     </ImgBackground>
                                     <Link>
-                                        <TextLine>{data.link1}</TextLine>
-                                    </Link>
-                                </LinkWrapper>
-                                <LinkWrapper>
-                                    <ImgBackground>
-                                        <LinkImg src={twitter} />
-                                    </ImgBackground>
-                                    <Link>
-                                        <TextLine>{data.link2}</TextLine>
+                                        <TextLine>{data.text}</TextLine>
                                     </Link>
                                 </LinkWrapper>
                             </TextBlock>

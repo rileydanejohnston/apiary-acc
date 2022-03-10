@@ -24,10 +24,6 @@ export const BlockTitle = styled.h3`
     color: #FFFFFF;
     margin-bottom: 40px;
 `
-export const TextWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-`
 export const TextBlock = styled.div`
     display: flex;
     flex-direction: column;
@@ -41,6 +37,7 @@ export const TextLine = styled.p`
     color: #FFFFFF;
     margin-bottom: ${props => props.margin ? '10px' : null};
     margin-right: ${props => props.$right ? '40px' : null};
+    white-space: pre-line;
 `
 export const LinkWrapper = styled.div`
     display: flex;
