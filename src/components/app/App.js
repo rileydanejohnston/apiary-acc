@@ -3,6 +3,7 @@ import Home from "../home/home";
 import Impact from "../impact/Impact";
 import Problem from "../problem/Problem";
 import Sustainable from "../sustainable/Sustainable";
+import How from '../how/How';
 import { AppWrapper } from "./styledApp";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Problem />
       <Impact />
       <Sustainable />
+      <How />
     </AppWrapper>
   );
 }
