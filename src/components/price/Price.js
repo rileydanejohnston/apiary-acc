@@ -1,16 +1,16 @@
 import React from 'react'
 import { Image, PriceContent, PriceWrapper, Text, Title, WorkButton } from './styledPrice'
+import { PriceData } from '../../constants/priceConst'
+const { title, text, button } = PriceData;
 
 const Price = () => {
   return (
     <PriceWrapper>
       <PriceContent>
-        <Title>
-          {`Get in touch with us to calculate prices\nfor your business`}
-        </Title>
+        <Title>{title}</Title>
         <Image />
-        <WorkButton>Work with us</WorkButton>
-        <Text>Leave your contacts and request, and our manager will reach out to you to establish our futher partnership!</Text>
+        <WorkButton>{button}</WorkButton>
+        <Text>{text}</Text>
       </PriceContent>
     </PriceWrapper>
   )
