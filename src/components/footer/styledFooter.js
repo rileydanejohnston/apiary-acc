@@ -42,6 +42,7 @@ export const TextLine = styled.p`
 export const LinkWrapper = styled.div`
     display: flex;
     margin-bottom: 16px;
+    align-items: center;
 `
 export const ImgBackground = styled.div`
     width: 24px;

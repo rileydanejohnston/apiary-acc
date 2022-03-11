@@ -23,8 +23,8 @@ export const FooterData = {
             text2: 'Planning to launch in 2022: \nUK, EU, OSEAN, China, Vietnam, Malaysia, \nTaiwan'
         }
     ],
-    links: [
-        'Awesome Container Company © 2022',
-        'Terms of Use'
-    ]
+    links: {
+        name: 'Awesome Container Company © 2022',
+        terms: 'Terms of Use'
+    }
 }

@@ -2,7 +2,8 @@ import { Block, BlockTitle, FooterBlocks, FooterBottom, FooterWrapper, ImgBackgr
 import { FooterData } from '../../constants/footer';
 
 const {
-    blocks
+    blocks,
+    links
 } = FooterData;
 
 const Footer = () => {
@@ -26,7 +27,7 @@ const Footer = () => {
                     }
 
                     else return (
-                        <Block key={blocks.indexOf(data)}>
+                        <Block>
                             <BlockTitle>{data.title}</BlockTitle>
                             <TextBlock>
                                 <LinkWrapper>
@@ -46,11 +47,11 @@ const Footer = () => {
                 <TextLine
                     $size={true}
                     $right={true}>
-                    Awesome Container Compnay © 2022
+                    {links.name}
                 </TextLine>
                 <Link>
                     <TextLine $size={true}>
-                        Terms of Use
+                        {links.terms}
                     </TextLine>
                 </Link>
             </FooterBottom>
