@@ -31,10 +31,28 @@ export const TeamData = {
     ],
     partnersTitle: 'And Awesome Partners',
     partners1: [
-        chef, stewards, ninja
+        {
+            image: chef,
+            link: 'https://chefatwork.pt/en/'
+        },
+        {
+            image: stewards,
+            link: 'https://www.stewardssolution.com/'
+        },
+        {
+            image: ninja,
+            link: 'https://www.ninjavan.co/'
+        }
     ],
     partners2: [
-        creatella, goa
+        {
+            image: creatella,
+            link: 'https://creatella.org/'
+        },
+        {
+            image: goa,
+            link: 'http://goaltd.com.hk/index.php/en/'
+        }
     ]
 
 }

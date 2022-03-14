@@ -1,6 +1,6 @@
 import logo from '../../images/indeed.svg';
 import { SectionTitle } from '../sharedComponents/sharedComponents';
-import { Link, LinkImg, Partner, PartnerRow, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamWrapper } from './styledTeam';
+import { Link, LinkImg, Partner, PartnerLink, PartnerLInk, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamWrapper } from './styledTeam';
 import { TeamData } from '../../constants/teamConst';
 
 const {
@@ -19,15 +19,13 @@ const Team = () => {
             <TeamBlocks>
                 {members.map((member) => {
                     return (
-                        <TeamBlock>
+                        <TeamBlock key={members.indexOf(member)}>
                             <TeamImage src={member.image} />
                             <TeamText>{member.name}</TeamText>
                             <TeamText>{member.role}</TeamText>
                             <Link
                                 href={member.link}
-                                target='_blank'>
-                                <LinkImg src={logo} />
-                            </Link>
+                                target='_blank' />
                         </TeamBlock>
                     )
                 })}
@@ -36,14 +34,18 @@ const Team = () => {
             <PartnerRow1>
                 {partners1.map((part) => {
                     return (
-                        <Partner src={part} />
+                        <PartnerLink href={part.link} target='_blank'>
+                            <Partner src={part.image} />
+                        </PartnerLink>
                     )
                 })}
             </PartnerRow1>
             <PartnerRow2>
                 {partners2.map((part) => {
                     return (
-                        <Partner src={part} />
+                        <PartnerLink href={part.link} target='_blank'>
+                            <Partner src={part.image} />
+                        </PartnerLink>
                     )
                 })}
             </PartnerRow2>
