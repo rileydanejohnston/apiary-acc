@@ -1,6 +1,5 @@
-import logo from '../../images/indeed.svg';
 import { SectionTitle } from '../sharedComponents/sharedComponents';
-import { Link, LinkImg, Partner, PartnerLink, PartnerLInk, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamWrapper } from './styledTeam';
+import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamWrapper } from './styledTeam';
 import { TeamData } from '../../constants/teamConst';
 
 const {
@@ -19,7 +18,8 @@ const Team = () => {
             <TeamBlocks>
                 {members.map((member) => {
                     return (
-                        <TeamBlock key={members.indexOf(member)}>
+                        <TeamBlock
+                            key={members.indexOf(member)}>
                             <TeamImage src={member.image} />
                             <TeamText>{member.name}</TeamText>
                             <TeamText>{member.role}</TeamText>

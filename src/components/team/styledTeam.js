@@ -44,16 +44,20 @@ export const PartnerRow1 = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 80px auto 55px auto;
 `
 export const PartnerRow2 = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    align-items: center;
     width: 56.26%;
 `
 export const PartnerLink = styled.a`
     cursor: pointer;
+    border: 1px solid red;
+    height: min-content;
 `
 export const Partner = styled.img`
 `
