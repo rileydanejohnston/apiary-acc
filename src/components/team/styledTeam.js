@@ -56,8 +56,6 @@ export const PartnerRow2 = styled.div`
 `
 export const PartnerLink = styled.a`
     cursor: pointer;
-    border: 1px solid red;
-    height: min-content;
 `
 export const Partner = styled.img`
 `
