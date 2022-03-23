@@ -5,6 +5,7 @@ import Impact from "../impact/Impact";
 import Problem from "../problem/Problem";
 import Sustainable from "../sustainable/Sustainable";
 import How from '../how/How';
+import Team from "../team/Team";
 import { AppWrapper } from "./styledApp";
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Impact />
       <Sustainable />
       <How />
+      <Team />
       <Footer />
     </AppWrapper>
   );
