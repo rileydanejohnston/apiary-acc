@@ -5,10 +5,10 @@ import {
   Bubbles
 } from './styledAvatar'
 
-const Avatar = ({ img, flip, position, animations }) => {
+const Avatar = ({ config, flip }) => {
 
-  const { left, top } = position;
-  const { group, typing } = animations;
+  const { image, position, group, typing } = config;
+  const { top, left } = position;
 
   return (
     <AvatarGroup
@@ -19,7 +19,7 @@ const Avatar = ({ img, flip, position, animations }) => {
       left={left}
     >
       <AvatarPic
-        img={img}
+        img={image}
         flip={flip}
       />
       <Bubbles

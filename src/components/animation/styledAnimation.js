@@ -6,6 +6,7 @@ export const AnimationWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: end;
+  padding-bottom: 26px;
 `;
 
 export const TextMessages = styled(motion.ul)`

@@ -1,3 +1,6 @@
+import leftSmiley from '../images/left-smiley.svg';
+import rightSmiley from '../images/right-smiley.svg';
+
 export const AnimationData = [
   {
     color: '#161616',
@@ -30,3 +33,61 @@ export const AnimationData = [
     text: 'Cool! We operate in Singapore and are planning to open in any other countries soon!'
   },
 ];
+
+
+export const leftAvatarConfig = {
+  image: leftSmiley,
+  position: {
+    top: '-19px',
+    left: '-50px',
+  },
+  group: {
+    initial: null,
+    animate: null,
+    transition: null
+  },
+  typing: {
+    initial: {
+      opacity: 1
+    },
+    animate: {
+      opacity: 0
+    },
+    transition: {
+      duration: 0.2,
+      delay: 2.5
+    }
+  },
+};
+
+export const rightAvatarConfig = {
+  image: rightSmiley,
+  position: {
+    top: 'calc(100% - 19px)',
+    left: 'calc(100% - 24px)',
+  },
+  group: {
+    initial: {
+      opacity: 0
+    },
+    animate: {
+      opacity: 1
+    },
+    transition: {
+      duration: 1,
+      delay: 4
+    }
+  },
+  typing: {
+    initial: {
+      opacity: 1
+    },
+    animate: {
+      opacity: 0
+    },
+    transition: {
+      duration: 0.2,
+      delay: 5.5
+    }
+  },
+};
