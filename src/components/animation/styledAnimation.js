@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 export const AnimationWrapper = styled.div`
   width: 36.3%;
-  padding: 52px 0;
   display: flex;
   justify-content: center;
   align-items: end;

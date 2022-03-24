@@ -12,7 +12,7 @@ export const AvatarGroup = styled(motion.div)`
   left: ${(props) => (props.left)};
 `;
 
-export const AvatarPic = styled(motion.div)`
+export const AvatarPic = styled.div`
   width: 38px;
   height: 38px;
   background: center / contain no-repeat url(${(props) => (props.img)});
