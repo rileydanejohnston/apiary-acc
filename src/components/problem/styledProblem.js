@@ -7,7 +7,7 @@ export const ProblemWrapper = styled.section`
 `;
 
 export const Grid = styled.div`
-  width: 1160px;
+  max-width: 1160px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -42,13 +42,9 @@ export const Subtitle = styled.p`
   letter-spacing: 0em;
 `;
 
-export const Highlight = styled.span`
-  color: #FF9820;
-`;
-
-export const StatCell = styled.div`
+export const CircleCell = styled.div`
   background: #fff;
-  border-radius: 20px;
+  border-radius: 3px;
   box-shadow: 0px 4px 4px 0px #00000040;
   display: flex;
   flex-direction: column;
@@ -57,7 +53,7 @@ export const StatCell = styled.div`
   align-items: center;
 `;
 
-export const StatTitle = styled.h3`
+export const CircleTitle = styled.h3`
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
@@ -72,26 +68,21 @@ export const CircleGraph = styled.div`
   background: center / contain no-repeat url(${PercentImg});
 `;
 
-export const WasteStat = styled.p`
+export const CircleStat = styled.p`
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
   letter-spacing: 0em;
   position: absolute;
-  top: 59px;
-  left: 59px;
   color: #000;
-`;
-
-export const RecycleStat = styled(WasteStat)`
-  top: 164px;
-  left: 88px;
+  top: ${(props) => (props.top)};
+  left: ${(props) => (props.left)};
 `;
 
 export const Image = styled.img`
   width: 100%;
   height: 315px;
-  border-radius: 20px;
+  border-radius: 3px;
   box-shadow: 0px 4px 4px 0px #00000040;
   margin-bottom: 20px;
 `;
