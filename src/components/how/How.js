@@ -28,7 +28,11 @@ const {
   buttonText
 } = HowData;
 
-const How = () => {
+const How = (props) => {
+
+  const openPopup = () => {
+    props.openPopup();
+  }
   return (
     <HowWrapper>
       <HowContent>
@@ -48,15 +52,18 @@ const How = () => {
             <StepText>{step2}</StepText>
           </StepGroupTruck>
           <StepGroupStars>
-            <Stars/>
+            <Stars />
             <StepText>{step4}</StepText>
           </StepGroupStars>
-          <Arrow top='136px' left='27.82%' deg='0deg'/>
-          <Arrow top='136px' left='69.35%' deg='90deg'/>
-          <Arrow top='480px' left='69.35%' deg='180deg'/>
-          <Arrow top='480px' left='27.82%' deg='270deg'/>
+          <Arrow top='136px' left='27.82%' deg='0deg' />
+          <Arrow top='136px' left='69.35%' deg='90deg' />
+          <Arrow top='480px' left='69.35%' deg='180deg' />
+          <Arrow top='480px' left='27.82%' deg='270deg' />
         </StepsWrapper>
-        <WorkButton>{buttonText}</WorkButton>
+        <WorkButton
+          onClick={openPopup}>
+          {buttonText}
+        </WorkButton>
       </HowContent>
     </HowWrapper>
   )
