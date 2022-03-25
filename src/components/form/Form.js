@@ -105,6 +105,7 @@ const Form = (props) => {
         props.closePopup();
     }
 
+    // ___________________________________ Google form data
     const formName = 'entry.1259736291';
 
     const formEmail = 'entry.1503900032';
@@ -145,7 +146,8 @@ const Form = (props) => {
                     onChange={checkFormValidity}
                     target='hidden_iframe'
                     action={formURL}
-                    method='POST'>
+                    method='POST'
+                    onSubmit={closePopup}>
                     <InputWrap>
                         <Label
                             $valid={nameValid}>

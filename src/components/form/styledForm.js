@@ -72,7 +72,7 @@ export const Label = styled.label`
 `
 export const Input = styled.input`
     width: 100%;
-    height: 7.71%;
+    height: 60px;
     background: #FFFFFF;
     border: ${props => props.$valid ?
         '1px solid #1C383C' :
