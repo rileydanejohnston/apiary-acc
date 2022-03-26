@@ -43,7 +43,3 @@ export const HomePicText = styled.p`
     line-height: 17px;
     margin-top: 13px;
 `
-export const HomeMessage = styled.div`
-    width: 36%;
-    border: 1px solid red;
-`
