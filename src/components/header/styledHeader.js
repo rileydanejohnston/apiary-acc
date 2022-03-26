@@ -5,6 +5,7 @@ export const HeaderSection = styled.header`
     height: 80px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 `
 export const HeaderLeft = styled.div`
     margin-left: 20.5px;
@@ -27,6 +28,10 @@ export const HeaderTitle = styled.p`
 export const HeaderRight = styled.nav`
     margin: auto 40px auto auto;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        margin-right: 20px;
+    }
 `
 export const HeaderLink = styled.a`
     font-style: normal;
@@ -39,6 +44,18 @@ export const HeaderLink = styled.a`
 
     &:last-of-type {
         margin-right: 40px;
+    }
+
+    :hover {
+        opacity: 0.7;
+    }
+
+    @media (max-width: 1024px) {
+        margin-right: 20px;
+
+        &: last-of-type {
+            margin-right: 20px;
+        }
     }
 `
 export const HeaderWork = styled(WorkWithUs)`

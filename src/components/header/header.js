@@ -2,7 +2,7 @@ import { HeaderLeft, HeaderLink, HeaderLogo, HeaderRight, HeaderSection, HeaderT
 import logo from '../../images/logo.svg';
 import logoT from '../../images/logoTipped.svg';
 import { useState } from 'react';
-import { headerLinks } from '../../constants/header';
+import { headerLinks } from '../../constants/headerConst';
 
 const Header = () => {
 
