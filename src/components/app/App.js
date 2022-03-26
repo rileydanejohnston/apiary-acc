@@ -16,11 +16,11 @@ const App = () => {
       <Header />
       <Home />
       <Problem />
-      <Impact />
       <Sustainable />
+      <How />
+      <Impact />
       <Esg />
       <Price />
-      <How />
       <Team />
       <Footer />
     </AppWrapper>
