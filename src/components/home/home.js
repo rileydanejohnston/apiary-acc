@@ -1,5 +1,6 @@
-import { HomeGraphics, HomeMessage, HomePic, HomePicContainer, HomePicText, HomePicTextContainer, HomeSection, Title, TitleSpan } from "./styledHome";
+import { HomeGraphics, HomePic, HomePicContainer, HomePicText, HomePicTextContainer, HomeSection, Title, TitleSpan } from "./styledHome";
 import trash from '../../images/TrashPlaceHolder.png';
+import Animation from "../animation/Animation";
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
                         <HomePicText>With Awesome Containers</HomePicText>
                     </HomePicTextContainer>
                 </HomePicContainer>
-                <HomeMessage />
+                <Animation />
             </HomeGraphics>
         </HomeSection>
     )
