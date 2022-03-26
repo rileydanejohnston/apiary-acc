@@ -9,7 +9,8 @@ import {
     Submit,
     TextArea,
     Overlay,
-    Iframe
+    Iframe,
+    SubmitScreen
 } from "./styledForm";
 import exit from '../../images/exit.svg';
 
@@ -23,6 +24,8 @@ const Form = (props) => {
     const [nameValid, setNameValid] = useState(true);
 
     const [emailValid, setEmailValid] = useState(true);
+
+    const [submitted, setSubmitted] = useState(false);
 
     // __________________________________inputs and errors
     const [inputs, setInputs] = useState({
@@ -84,7 +87,7 @@ const Form = (props) => {
         setInputs({
             name: '',
             email: '',
-            request: ''
+            request: 'I would like to learn more about partnering with Awesome Container Company!'
         })
         setErrors({
             name: '',
@@ -93,17 +96,13 @@ const Form = (props) => {
         setIsValid(false);
         setNameValid(true);
         setEmailValid(true);
+        setSubmitted(false);
     }
 
     // ___________________reset inputs when popup is closed
     useEffect(() => {
         resetInputs();
     }, [props.open]);
-
-    // ____________________________close popup
-    const closePopup = () => {
-        props.closePopup();
-    }
 
     // ___________________________________ Google form data
     const formName = 'entry.1259736291';
@@ -125,77 +124,92 @@ const Form = (props) => {
         }
     }
 
+    const submitForm = () => {
+        setSubmitted(true);
+    }
+
     return (
         <Overlay open={props.open}>
             <Wrapper>
                 <Exit
                     src={exit}
-                    onClick={closePopup} />
-                <Title>
-                    Leave your contacts and request,
-                    and our manager will reach out to you to
-                    establish our futher parntership!
-                </Title>
-                <Iframe
-                    title='hidden_iframe'
-                    name='hidden_iframe'
-                    id='hidden_iframe'
-                    onload={handleHiddenFrameLoaded} />
-                <ConnectForm
-                    ref={formRef}
-                    onChange={checkFormValidity}
-                    target='hidden_iframe'
-                    action={formURL}
-                    method='POST'
-                    onSubmit={closePopup}>
-                    <InputWrap>
-                        <Label
-                            $valid={nameValid}>
-                            Personal or company name *
-                            {!nameValid && errorMessage}
-                        </Label>
-                        <Input
-                            $valid={nameValid}
-                            type='text'
-                            name={formName}
-                            id='name'
-                            required
-                            onChange={handleChange}
-                            onBlur={updateErrors}
-                            value={inputs.name} />
-                    </InputWrap>
-                    <InputWrap>
-                        <Label
-                            $valid={emailValid}>
-                            Email *
-                            {!emailValid && errorMessage}
-                        </Label>
-                        <Input
-                            $valid={emailValid}
-                            type='text'
-                            id='email'
-                            name={formEmail}
-                            required
-                            onChange={handleChange}
-                            onBlur={updateErrors}
-                            value={inputs.email} />
-                    </InputWrap>
-                    <InputWrap>
-                        <Label
-                            $valid={true}>
-                            Your request / interest
-                        </Label>
-                        <TextArea
-                            name={formRequest}
-                            id='request'
-                            onChange={handleChange}
-                            value={inputs.request} />
-                    </InputWrap>
-                    <Submit
-                        valid={isValid}
-                        disabled={!isValid}>
-                        Send</Submit>
-                </ConnectForm>
+                    onClick={props.closePopup} />
+                {submitted ?
+                    <SubmitScreen>
+                        <Title
+                            $thanks={true}>
+                            Thanks! We will get in touch with you soon!
+                        </Title>
+                    </SubmitScreen>
+                    :
+                    <>
+                        <Title>
+                            Leave your contacts and request,
+                            and our manager will reach out to you to
+                            establish our future partnership!
+                        </Title>
+                        <Iframe
+                            title='hidden_iframe'
+                            name='hidden_iframe'
+                            id='hidden_iframe'
+                            onload={handleHiddenFrameLoaded} />
+                        <ConnectForm
+                            ref={formRef}
+                            onChange={checkFormValidity}
+                            target='hidden_iframe'
+                            action={formURL}
+                            method='POST'
+                            onSubmit={submitForm}>
+                            <InputWrap>
+                                <Label
+                                    $valid={nameValid}>
+                                    Personal or company name *
+                                    {!nameValid && errorMessage}
+                                </Label>
+                                <Input
+                                    $valid={nameValid}
+                                    type='text'
+                                    name={formName}
+                                    id='name'
+                                    required
+                                    onChange={handleChange}
+                                    onBlur={updateErrors}
+                                    value={inputs.name} />
+                            </InputWrap>
+                            <InputWrap>
+                                <Label
+                                    $valid={emailValid}>
+                                    Email *
+                                    {!emailValid && errorMessage}
+                                </Label>
+                                <Input
+                                    $valid={emailValid}
+                                    type='email'
+                                    id='email'
+                                    name={formEmail}
+                                    required
+                                    onChange={handleChange}
+                                    onBlur={updateErrors}
+                                    value={inputs.email} />
+                            </InputWrap>
+                            <InputWrap>
+                                <Label
+                                    $valid={true}>
+                                    Your request / interest
+                                </Label>
+                                <TextArea
+                                    name={formRequest}
+                                    id='request'
+                                    onChange={handleChange}
+                                    value={inputs.request} />
+                            </InputWrap>
+                            <Submit
+                                valid={isValid}
+                                disabled={!isValid}>
+                                Send</Submit>
+                        </ConnectForm>
+                    </>
+                }
             </Wrapper>
         </Overlay>
     )

@@ -49,6 +49,7 @@ export const Title = styled.h3`
     line-height: 1.33;
     white-space: pre-line;
     margin-bottom: 50px;
+    text-align: ${props => props.$thanks ? 'center' : 'left'};
 `
 export const ConnectForm = styled.form`
     width: 78.95%; // 600/760
@@ -97,6 +98,7 @@ export const TextArea = styled.textarea`
     border-radius: 3px;
     padding: 20px;
     outline: none;
+    resize: none;
 `
 export const Submit = styled(WorkWithUs)`
     width: 116px;
@@ -109,4 +111,11 @@ export const Submit = styled(WorkWithUs)`
 `
 export const Iframe = styled.iframe`
     display: none;
+`
+export const SubmitScreen = styled.div`
+        width: 760px;
+        height: 778px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 `

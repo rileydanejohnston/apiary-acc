@@ -6,10 +6,6 @@ import { headerLinks } from '../../constants/header';
 
 const Header = (props) => {
 
-    const openPopup = () => {
-        props.openPopup();
-    }
-
     const [image, setImage] = useState(logo);
 
     return (
@@ -32,7 +28,7 @@ const Header = (props) => {
                     )
                 })}
                 <HeaderWork
-                    onClick={openPopup}>
+                    onClick={props.openPopup}>
                     Work with us
                 </HeaderWork>
             </HeaderRight>

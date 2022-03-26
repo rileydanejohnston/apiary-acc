@@ -30,9 +30,6 @@ const {
 
 const How = (props) => {
 
-  const openPopup = () => {
-    props.openPopup();
-  }
   return (
     <HowWrapper>
       <HowContent>
@@ -61,7 +58,7 @@ const How = (props) => {
           <Arrow top='480px' left='27.82%' deg='270deg' />
         </StepsWrapper>
         <WorkButton
-          onClick={openPopup}>
+          onClick={props.openPopup}>
           {buttonText}
         </WorkButton>
       </HowContent>
