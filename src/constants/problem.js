@@ -6,13 +6,29 @@ export const ProblemData = {
   statTitle: 'Single-use plastics',
   wasteStat: {
     text: '91% Waste',
-    top: '59px',
-    left: '59px'
+    position: {
+      over1024: {
+        top: '59px',
+        left: '59px'
+      },
+      under1024: {
+        top: '48px',
+        left: '32px'
+      }
+    }
   },
   recycleStat: {
     text: '9% Recycled',
-    top: '164px',
-    left: '88px'
+    position: {
+      over1024: {
+        top: '164px',
+        left: '88px'
+      },
+      under1024: {
+        top: '107px',
+        left: '48px'
+      },
+    }
   },
   problemTitle: 'Single-use packaging: bad for the planet, bad for business',
   subtitle: {

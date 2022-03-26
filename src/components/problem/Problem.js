@@ -33,13 +33,11 @@ const Problem = () => {
           <CircleTitle>{statTitle}</CircleTitle>
           <CircleGraph>
             <CircleStat
-              top={wasteStat.top}
-              left={wasteStat.left}
+              position={wasteStat.position}
             >
               {wasteStat.text}</CircleStat>
             <CircleStat 
-              top={recycleStat.top}
-              left={recycleStat.left}
+              position={recycleStat.position}
             >
               {recycleStat.text}</CircleStat>
           </CircleGraph>
