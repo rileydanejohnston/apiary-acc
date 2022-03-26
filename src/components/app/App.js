@@ -36,7 +36,8 @@ const App = () => {
       <How
         openPopup={openPopup} />
       <Esg />
-      <Price />
+      <Price
+        openPopup={openPopup} />
       <How />
       <Team />
       <Footer />
