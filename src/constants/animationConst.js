@@ -30,7 +30,7 @@ export const AnimationData = [
     color: '#fff',
     bgColor: '#1C383C;',
     align: 'end',
-    text: 'Cool! We operate in Singapore and are planning to open in any other countries soon!'
+    text: 'Cool! We operate in Singapore and are planning to open in many other countries soon!'
   },
 ];
 
