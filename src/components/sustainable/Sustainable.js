@@ -27,7 +27,7 @@ const {
 const Sustainable = () => {
 
   return (
-    <SustainableWrapper>
+    <SustainableWrapper id='solution'>
       <SustainableContent>
         <TitlesGroup>
           <Title>{title}</Title>

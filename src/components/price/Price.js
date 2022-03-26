@@ -5,7 +5,7 @@ const { title, text, button } = PriceData;
 
 const Price = () => {
   return (
-    <PriceWrapper>
+    <PriceWrapper id='pricing'>
       <PriceContent>
         <Title>{title}</Title>
         <Image />
