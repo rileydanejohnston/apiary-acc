@@ -2,32 +2,42 @@ import React from 'react'
 import {
   BenefitsSection,
   BenefitText,
-  Circle,
-  ContainerImg,
+  Image,
   LogisticsGroup,
   StorageGroup,
   SupplyGroup,
 } from './styledBenefits'
 import { SustainableData } from '../../constants/sustainableConstants'
-const {
-  logisticText,
-  supplyText,
-  storageText
-} = SustainableData
+const { logisticData, supplyData, storageData } = SustainableData
+const { logisticsImg, logisticsText, logisticsSize } = logisticData
+const { supplyImg, supplyText, supplySize } = supplyData
+const { storageImg, storageText, storageSize } = storageData
 
 const Benefits = () => {
   return (
     <BenefitsSection>
       <LogisticsGroup>
-        <ContainerImg />
-        <BenefitText>{logisticText}</BenefitText>
+        <Image
+          img={logisticsImg}
+          width={logisticsSize.width}
+          height={logisticsSize.height}
+        />
+        <BenefitText>{logisticsText}</BenefitText>
       </LogisticsGroup>
       <SupplyGroup>
-        <Circle />
+        <Image
+          img={supplyImg}
+          width={supplySize.width}
+          height={supplySize.height}
+        />
         <BenefitText>{supplyText}</BenefitText>
       </SupplyGroup>
       <StorageGroup>
-        <Circle />
+        <Image
+          img={storageImg}
+          width={storageSize.width}
+          height={storageSize.height}
+        />
         <BenefitText>{storageText}</BenefitText>
       </StorageGroup>
     </BenefitsSection>

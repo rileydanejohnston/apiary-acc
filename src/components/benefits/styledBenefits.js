@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import containerMonster from '../../images/container-monster.svg';
 
 export const BenefitsSection = styled.div`
   width: 84.17%;       /* 1212 width / 1440 width */
@@ -20,10 +19,11 @@ export const LogisticsGroup = styled.div`
   left: 6.35%;         /* (191px -  114px) / 1212px */
 `;
 
-export const ContainerImg = styled.div`
-  width: 146.09px;
-  height: 143.5px;
-  background: center / contain no-repeat url(${containerMonster});
+export const Image = styled.div`
+  width: ${(props) => (props.width)};
+  height: ${(props) => (props.height)};
+  background: center / contain no-repeat;
+  background-image: url(${(props) => (props.img)});
 `;
 
 export const BenefitText = styled.p`
@@ -43,13 +43,6 @@ export const SupplyGroup = styled(LogisticsGroup)`
   left = (803px -  114 + 54.5) / 1212px
   the 54.5 formats the text
 */
-`;
-
-export const Circle = styled.div`
-  width: 148px;
-  height: 148px;
-  background: #C4C4C4;
-  border-radius: 100px;
 `;
 
 export const StorageGroup = styled(SupplyGroup)`
