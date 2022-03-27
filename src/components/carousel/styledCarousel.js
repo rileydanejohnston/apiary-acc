@@ -32,6 +32,12 @@ export const SlideContainer = styled.div`
   display: flex;
 `;
 
+export const ButtonWrapper = styled.div`
+  @media( max-width: 767px) {
+    display: none;
+  }
+`;
+
 export const CarouselButton = styled.button`
   width: 24px;
   height: 24px;
@@ -54,9 +60,14 @@ export const CurrentSlide = styled.p`
 `;
 
 export const MobileBtnWrapper = styled.div`
-  margin-top: 24px;
-  width: 91.47%;     // 343 / 375
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: none;
+  
+  @media( max-width: 767px) {
+    display: block;
+    margin-top: 24px;
+    width: 91.47%;     // 343 / 375
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { withSize } from 'react-sizeme'
+import React, { useState, useCallback } from 'react'
 import arrowLeft from '../../images/arrow-left.svg'
 import arrowRight from '../../images/arrow-right.svg'
 import { CarouselData } from '../../constants/carouselConst'
@@ -12,10 +11,11 @@ import {
   SlideContainer,
   MobileBtnWrapper,
   CurrentSlide,
+  ButtonWrapper,
 } from './styledCarousel'
 import uniqueId from 'lodash.uniqueid'
 
-const Carousel = ({ size }) => {
+const Carousel = () => {
 
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [scrollProgress, setScrollProgress] = useState(1);
@@ -43,35 +43,33 @@ const Carousel = ({ size }) => {
 
   return (
     <CarouselWrapper >
-      { // scroll buttons appear on sides of carousel at large screen sizes
-        size.width > 767 && 
+      { /* scroll buttons appear on sides of carousel at large screen sizes */}
+      <ButtonWrapper>
         <CarouselButton image={arrowLeft} onClick={scrollPrev} />
-      }
-        <ViewPort ref={emblaRef}>
-          <SlideContainer>
-          {
-            CarouselData.map((slide) => {
-              return (
-                <Slide key={uniqueId()} data={slide} />
-              )
-            })
-          }
-          </SlideContainer>
-        </ViewPort>
-        { // scroll buttons appear on sides of carousel at large screen sizes
-          size.width > 767 && 
-          <CarouselButton image={arrowRight} onClick={scrollNext} />
+      </ButtonWrapper>
+      <ViewPort ref={emblaRef}>
+        <SlideContainer>
+        {
+          CarouselData.map((slide) => {
+            return (
+              <Slide key={uniqueId()} data={slide} />
+            )
+          })
         }
-        { // scroll buttons appear below carousel at smaller screens
-          size.width <= 767 && 
-          <MobileBtnWrapper>
-            <CarouselButton image={arrowLeft} onClick={scrollPrev} />
-            <CurrentSlide>{scrollProgress}/3</CurrentSlide>
-            <CarouselButton image={arrowRight} onClick={scrollNext} />
-          </MobileBtnWrapper>
-        }
+        </SlideContainer>
+      </ViewPort>
+      { /* scroll buttons appear on sides of carousel at large screen sizes */}
+      <ButtonWrapper>
+        <CarouselButton image={arrowRight} onClick={scrollNext} />
+      </ButtonWrapper>
+      { /* scroll buttons appear below carousel at smaller screens */}
+      <MobileBtnWrapper>
+        <CarouselButton image={arrowLeft} onClick={scrollPrev} />
+        <CurrentSlide>{scrollProgress}/3</CurrentSlide>
+        <CarouselButton image={arrowRight} onClick={scrollNext} />
+      </MobileBtnWrapper>
     </CarouselWrapper>
   )
 }
 
-export default withSize()(Carousel)
+export default Carousel
