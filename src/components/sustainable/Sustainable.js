@@ -1,26 +1,17 @@
 import React from 'react'
 import { Highlight } from '../sharedComponents/sharedComponents'
 import {
-  BenefitsSection,
-  BenefitText,
-  Circle,
-  ContainerImg,
-  LogisticsGroup,
-  StorageGroup,
   Subtitle,
-  SupplyGroup,
   SustainableWrapper,
   Title,
   TitlesGroup
 } from './styledSustainable'
 import { SustainableData } from '../../constants/sustainableConstants'
 import Carousel from '../carousel/Carousel'
+import Benefits from '../benefits/Benefits'
 const {
   title,
   subtitle,
-  logisticText,
-  supplyText,
-  storageText
 } = SustainableData
 
 const Sustainable = () => {
@@ -35,20 +26,7 @@ const Sustainable = () => {
         </Subtitle>
       </TitlesGroup>
       <Carousel />
-      <BenefitsSection>
-        <LogisticsGroup>
-          <ContainerImg />
-          <BenefitText>{logisticText}</BenefitText>
-        </LogisticsGroup>
-        <SupplyGroup>
-          <Circle />
-          <BenefitText>{supplyText}</BenefitText>
-        </SupplyGroup>
-        <StorageGroup>
-          <Circle />
-          <BenefitText>{storageText}</BenefitText>
-        </StorageGroup>
-      </BenefitsSection>
+      <Benefits />
     </SustainableWrapper>
   )
 }

@@ -13,16 +13,20 @@ import { AppWrapper } from "./styledApp";
 const App = () => {
   return (
     <AppWrapper>
+      {/** 
       <Header />
       <Home />
       <Problem />
+      */}
       <Sustainable />
+      {/**
       <How />
       <Impact />
       <Esg />
       <Price />
       <Team />
       <Footer />
+       */}
     </AppWrapper>
   );
 }
