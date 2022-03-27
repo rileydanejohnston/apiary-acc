@@ -9,7 +9,6 @@ import {
   StorageGroup,
   Subtitle,
   SupplyGroup,
-  SustainableContent,
   SustainableWrapper,
   Title,
   TitlesGroup
@@ -28,30 +27,28 @@ const Sustainable = () => {
 
   return (
     <SustainableWrapper>
-      <SustainableContent>
-        <TitlesGroup>
-          <Title>{title}</Title>
-          <Subtitle>
-            <Highlight>{subtitle.highlight}</Highlight>
-            {subtitle.normal}
-          </Subtitle>
-        </TitlesGroup>
-        <Carousel />
-        <BenefitsSection>
-          <LogisticsGroup>
-            <ContainerImg />
-            <BenefitText>{logisticText}</BenefitText>
-          </LogisticsGroup>
-          <SupplyGroup>
-            <Circle />
-            <BenefitText>{supplyText}</BenefitText>
-          </SupplyGroup>
-          <StorageGroup>
-            <Circle />
-            <BenefitText>{storageText}</BenefitText>
-          </StorageGroup>
-        </BenefitsSection>
-      </SustainableContent>
+      <TitlesGroup>
+        <Title>{title}</Title>
+        <Subtitle>
+          <Highlight>{subtitle.highlight}</Highlight>
+          {subtitle.normal}
+        </Subtitle>
+      </TitlesGroup>
+      <Carousel />
+      <BenefitsSection>
+        <LogisticsGroup>
+          <ContainerImg />
+          <BenefitText>{logisticText}</BenefitText>
+        </LogisticsGroup>
+        <SupplyGroup>
+          <Circle />
+          <BenefitText>{supplyText}</BenefitText>
+        </SupplyGroup>
+        <StorageGroup>
+          <Circle />
+          <BenefitText>{storageText}</BenefitText>
+        </StorageGroup>
+      </BenefitsSection>
     </SustainableWrapper>
   )
 }

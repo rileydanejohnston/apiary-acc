@@ -4,18 +4,24 @@ import containerMonster from '../../images/container-monster.svg';
 export const SustainableWrapper = styled.section`
   padding: 120px 0;
   background: #F4F4F4;
-`;
 
-export const SustainableContent = styled.div`
-  /* 1340 width / 1440 width (1340 is from carousel button to button) */
-  width: 93.06%; 
-  margin: 0 auto;
+  @media( max-width: 1023px ) {
+    padding-bottom: 285px;
+  }
+
+  @media( max-width: 767px ) {
+    padding: 40px 0 80px 0;
+  }
 `;
 
 export const TitlesGroup = styled.div`
   max-width: 598px;
   margin: 0 auto;
   padding-bottom: 60px;
+
+  @media( max-width: 767px ) {
+    display: none;
+  }
 `;
 
 export const Title = styled.h2`
@@ -36,7 +42,7 @@ export const Subtitle = styled.p`
 `;
 
 export const BenefitsSection = styled.div`
-  width: 90.45%;       /* 1212 width / 1340 width */
+  width: 84.17%;       /* 1212 width / 1440 width */
   height: 751px;       /* 871px (slide to next section) - 120px (padding) */
   margin: 0 auto;
   position: relative;
