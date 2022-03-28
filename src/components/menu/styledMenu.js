@@ -17,7 +17,9 @@ export const Wrapper = styled.div`
 
     @media (max-width: 425px) {
         padding-top: 111px;
+        margin: auto;
         border: none;
+        right: 0;
     }
 `
 export const Nav = styled.nav`
