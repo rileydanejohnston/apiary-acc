@@ -1,22 +1,48 @@
 import styled from "styled-components/macro";
 
 export const BenefitsSection = styled.div`
-  width: 84.17%;       /* 1212 width / 1440 width */
   height: 751px;       /* 871px (slide to next section) - 120px (padding) */
   margin: 0 auto;
   position: relative;
+
+  @media( max-width: 1280px) {
+  }
+  @media( max-width: 1023px) {
+    height: 878px;
+  }
+  @media(max-width: 767px) {
+    height: auto;
+    padding: 118px 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-contents: center;
+    align-items: center;
+    gap: 75px;
+  }
 `;
 
-export const LogisticsGroup = styled.div`
-  max-width: 286px;
+export const BenefitGroup = styled.div`
   display: flex;
-  gap: 37.5px;
+  gap: 40px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 110px;
-  left: 6.35%;         /* (191px -  114px) / 1212px */
+  transition: top .3s ease, left .3s ease;
+  top: ${(props) => (props.position.over1280.top)};
+  left: ${(props) => (props.position.over1280.left)};
+
+  @media( max-width: 1280px) {
+    left: ${(props) => (props.position.over1023.left)};
+  }
+  @media( max-width: 1023px) {
+    top: ${(props) => (props.position.over767.top)};
+    left: ${(props) => (props.position.over767.left)};
+  }
+  @media(max-width: 767px) {
+    position: static;
+    gap: 20px;
+  }
 `;
 
 export const Image = styled.div`
@@ -32,21 +58,5 @@ export const BenefitText = styled.p`
   line-height: 28px;
   letter-spacing: 0em;
   text-align: center;
-`;
-
-export const SupplyGroup = styled(LogisticsGroup)`
-  gap: 45px;
-  max-width: 360px;
-  top: 218px;
-  left: 61.34%;        
-/* 
-  left = (803px -  114 + 54.5) / 1212px
-  the 54.5 formats the text
-*/
-`;
-
-export const StorageGroup = styled(SupplyGroup)`
-  max-width: 543px;
-  top: 500px;
-  left: 17%;       /* (320px -  114px) / 1212px */
+  max-width: ${(props) => (props.width)}
 `;

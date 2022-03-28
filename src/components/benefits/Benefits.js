@@ -3,43 +3,41 @@ import {
   BenefitsSection,
   BenefitText,
   Image,
-  LogisticsGroup,
-  StorageGroup,
-  SupplyGroup,
+  BenefitGroup,
 } from './styledBenefits'
 import { SustainableData } from '../../constants/sustainableConstants'
 const { logisticData, supplyData, storageData } = SustainableData
-const { logisticsImg, logisticsText, logisticsSize } = logisticData
-const { supplyImg, supplyText, supplySize } = supplyData
-const { storageImg, storageText, storageSize } = storageData
+const { logisticsImg, logisticsText, logisticsTextWidth, logisticsSize, logisticsPosition } = logisticData
+const { supplyImg, supplyText, supplyTextWidth, supplySize, supplyPosition } = supplyData
+const { storageImg, storageText, storageTextWidth, storageSize, storagePosition } = storageData
 
 const Benefits = () => {
   return (
     <BenefitsSection>
-      <LogisticsGroup>
+      <BenefitGroup position={logisticsPosition}>
         <Image
           img={logisticsImg}
           width={logisticsSize.width}
           height={logisticsSize.height}
         />
-        <BenefitText>{logisticsText}</BenefitText>
-      </LogisticsGroup>
-      <SupplyGroup>
+        <BenefitText width={logisticsTextWidth}>{logisticsText}</BenefitText>
+      </BenefitGroup>
+      <BenefitGroup position={supplyPosition}>
         <Image
           img={supplyImg}
           width={supplySize.width}
           height={supplySize.height}
         />
-        <BenefitText>{supplyText}</BenefitText>
-      </SupplyGroup>
-      <StorageGroup>
+        <BenefitText width={supplyTextWidth}>{supplyText}</BenefitText>
+      </BenefitGroup>
+      <BenefitGroup position={storagePosition}>
         <Image
           img={storageImg}
           width={storageSize.width}
           height={storageSize.height}
         />
-        <BenefitText>{storageText}</BenefitText>
-      </StorageGroup>
+        <BenefitText width={storageTextWidth}>{storageText}</BenefitText>
+      </BenefitGroup>
     </BenefitsSection>
   )
 }
