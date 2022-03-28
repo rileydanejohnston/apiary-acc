@@ -25,6 +25,8 @@ const Form = (props) => {
 
     const [emailValid, setEmailValid] = useState(true);
 
+    const [requestValid, setRequestValid] = useState(true);
+
     const [submitted, setSubmitted] = useState(false);
 
     // __________________________________inputs and errors
@@ -36,7 +38,8 @@ const Form = (props) => {
 
     const [errors, setErrors] = useState({
         name: '',
-        email: ''
+        email: '',
+        request: ''
     });
 
     const errorMessage = '(This field is required)'
@@ -46,20 +49,28 @@ const Form = (props) => {
     }
 
     // _____________________________ determine input for validation
-    const pickInput = (name, valid) => {
-        if (name === 'name') {
+    const pickInput = (id, valid) => {
+        if (id === 'name') {
             if (valid) {
                 setNameValid(true)
                 return
             }
             else setNameValid(false)
         }
-        if (name === 'email') {
+        if (id === 'email') {
             if (valid) {
                 setEmailValid(true)
                 return
             }
             else setEmailValid(false)
+        }
+        if (id === 'request') {
+            console.log(id, valid)
+            if (valid) {
+                setRequestValid(true)
+                return
+            }
+            else setRequestValid(false)
         }
     }
 
@@ -96,6 +107,7 @@ const Form = (props) => {
         setIsValid(false);
         setNameValid(true);
         setEmailValid(true);
+        setRequestValid(true);
         setSubmitted(false);
     }
 
@@ -194,14 +206,18 @@ const Form = (props) => {
                             </InputWrap>
                             <InputWrap>
                                 <Label
-                                    $valid={true}>
+                                    $valid={requestValid}>
                                     Your request / interest
+                                    {!requestValid && errorMessage}
                                 </Label>
                                 <TextArea
+                                    $valid={requestValid}
                                     name={formRequest}
                                     id='request'
                                     onChange={handleChange}
-                                    value={inputs.request} />
+                                    onBlur={updateErrors}
+                                    value={inputs.request}
+                                    required />
                             </InputWrap>
                             <Submit
                                 valid={isValid}

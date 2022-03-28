@@ -94,7 +94,9 @@ export const TextArea = styled.textarea`
     font-weight: 400;
     font-size: 18px;
     line-height: 1.11;
-    border: 1px solid #1C383C;
+    border: ${props => props.$valid ?
+        '1px solid #1C383C' :
+        '1px solid #E30613'};
     border-radius: 3px;
     padding: 20px;
     outline: none;
