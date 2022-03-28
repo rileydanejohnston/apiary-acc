@@ -25,12 +25,20 @@ export const HeaderTitle = styled.p`
     line-height: 17px;
     color: #1C383C;
 `
-export const HeaderRight = styled.nav`
+export const HeaderRight = styled.div`
     margin: auto 40px auto auto;
     align-items: center;
+    display: flex;
 
     @media (max-width: 1024px) {
         margin-right: 20px;
+    }
+`
+export const HeaderNav = styled.nav`
+    align-items: center;
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `
 export const HeaderLink = styled.a`
@@ -62,4 +70,15 @@ export const HeaderWork = styled(WorkWithUs)`
     width: 132px;
     height: 44px;
     border-style: none;
+`
+export const Hamburger = styled.img`
+    width: 44px;
+    height: 44px;
+    margin-right: 30px;
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
 `
