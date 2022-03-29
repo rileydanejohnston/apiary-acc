@@ -31,14 +31,13 @@ const App = () => {
         openPopup={openPopup} />
       <Home />
       <Problem />
-      <Impact />
       <Sustainable />
       <How
         openPopup={openPopup} />
+      <Impact />
       <Esg />
       <Price
         openPopup={openPopup} />
-      <How />
       <Team />
       <Footer />
       <Form
