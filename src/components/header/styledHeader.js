@@ -64,7 +64,7 @@ export const HeaderRight = styled.div`
 export const HeaderNav = styled.nav`
     align-items: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1023px) {
         display: none;
     }
 `
@@ -85,7 +85,7 @@ export const HeaderLink = styled.a`
         opacity: 0.7;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         margin-right: 20px;
 
         &: last-of-type {
@@ -98,18 +98,18 @@ export const HeaderWork = styled(WorkWithUs)`
     height: 44px;
     border-style: none;
 
-    @media (max-width: 425px) {
+    @media (max-width: 525px) {
         display: none;
     }
 `
 export const Hamburger = styled.img`
-    width: 44px;
-    height: 44px;
+    width: 28px;
+    height: 28px;
     margin-right: 30px;
     display: none;
     cursor: pointer;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1023px) {
         display: block;
     }
     @media (max-width: 425px) {

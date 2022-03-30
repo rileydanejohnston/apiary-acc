@@ -3,14 +3,11 @@ import { WorkWithUs } from '../sharedComponents/sharedComponents';
 
 export const Wrapper = styled.div`
     width: 100%;
-    max-width: 375px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
-    right: 20%;
-    border: 1px solid black;
-    border-radius: 20px;
+    top: 80px;
+    border-bottom: 1px solid black;
     padding: 60px 0 60px 0;
     background: white;
     z-index: 2;
@@ -19,6 +16,7 @@ export const Wrapper = styled.div`
         padding-top: 111px;
         margin: auto;
         border: none;
+        top: 60;
         right: 0;
     }
 `
@@ -50,7 +48,7 @@ export const WorkButton = styled(WorkWithUs)`
     margin: auto;
     display: none;
 
-    @media (max-width: 425px) {
+    @media (max-width: 525px) {
         display: block;
     }
 `

@@ -13,7 +13,7 @@ const {
 const Team = () => {
 
     return (
-        <TeamWrapper id='contacts'>
+        <TeamWrapper id='team'>
             <SectionTitle>{teamTitle}</SectionTitle>
             <TeamBlocks>
                 {members.map((member) => {

@@ -14,7 +14,7 @@ const App = () => {
   return (
     <AppWrapper>
       <Header />
-      {/* <Home />
+      <Home />
       <Problem />
       <Impact />
       <Sustainable />
@@ -22,7 +22,7 @@ const App = () => {
       <Price />
       <How />
       <Team />
-      <Footer /> */}
+      <Footer />
     </AppWrapper>
   );
 }

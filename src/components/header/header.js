@@ -6,6 +6,7 @@ import menuExit from '../../images/menuExit.svg';
 import { useState } from 'react';
 import { headerLinks } from '../../constants/headerConst';
 import Menu from "../menu/Menu";
+import uniqueId from 'lodash.uniqueid';
 
 const Header = () => {
 
@@ -16,6 +17,12 @@ const Header = () => {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     }
+
+    window.addEventListener('resize', function () {
+        if (this.window.innerWidth > 1024) {
+            setMenuOpen(false)
+        }
+    });
 
     return (
         <HeaderSection>
@@ -33,8 +40,8 @@ const Header = () => {
                     {headerLinks.map((link) => {
                         return (
                             <HeaderLink
-                                href={link.id}
-                                key={headerLinks.indexOf(link)}>
+                                key={uniqueId()}
+                                href={link.id}>
                                 {link.name}
                             </HeaderLink>
                         )
