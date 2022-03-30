@@ -1,5 +1,5 @@
 import React from 'react'
-import { 
+import {
   EsgContent,
   EsgImage,
   EsgSubtitle,
@@ -17,8 +17,10 @@ const Esg = () => {
         <EsgImage />
         <EsgTitle>{title}</EsgTitle>
         <EsgSubtitle>
-          {subtitle1} 
-          <Highlight>{highlight}</Highlight>
+          {subtitle1}
+          <Highlight>
+            {highlight}
+          </Highlight>
           {subtitle2}
         </EsgSubtitle>
       </EsgContent>

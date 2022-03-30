@@ -3,13 +3,16 @@ import { Image, PriceContent, PriceWrapper, Text, Title, WorkButton } from './st
 import { PriceData } from '../../constants/priceConst'
 const { title, text, button } = PriceData;
 
-const Price = () => {
+const Price = (props) => {
   return (
     <PriceWrapper>
       <PriceContent>
         <Title>{title}</Title>
         <Image />
-        <WorkButton>{button}</WorkButton>
+        <WorkButton
+          onClick={props.openPopup}>
+          {button}
+        </WorkButton>
         <Text>{text}</Text>
       </PriceContent>
     </PriceWrapper>
