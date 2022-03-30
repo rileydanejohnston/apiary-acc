@@ -9,20 +9,40 @@ import Sustainable from "../sustainable/Sustainable";
 import How from '../how/How';
 import Team from "../team/Team";
 import { AppWrapper } from "./styledApp";
+import Form from "../form/Form";
+import { useState } from 'react';
 
 const App = () => {
+
+  // POPUP_____________________________________________POPUP
+  const [popupOpen, setPopupOpen] = useState(false);
+
+  const openPopup = () => {
+    setPopupOpen(true);
+  }
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  }
+
   return (
     <AppWrapper>
-      <Header />
+      <Header
+        openPopup={openPopup} />
       <Home />
       <Problem />
       <Sustainable />
-      <How />
+      <How
+        openPopup={openPopup} />
       <Impact />
       <Esg />
-      <Price />
+      <Price
+        openPopup={openPopup} />
       <Team />
       <Footer />
+      <Form
+        open={popupOpen}
+        closePopup={closePopup} />
     </AppWrapper>
   );
 }
