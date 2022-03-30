@@ -4,7 +4,7 @@ import logoT from '../../images/logoTipped.svg';
 import { useState } from 'react';
 import { headerLinks } from '../../constants/header';
 
-const Header = () => {
+const Header = (props) => {
 
     const [image, setImage] = useState(logo);
 
@@ -27,7 +27,10 @@ const Header = () => {
                         </HeaderLink>
                     )
                 })}
-                <HeaderWork>Work with us</HeaderWork>
+                <HeaderWork
+                    onClick={props.openPopup}>
+                    Work with us
+                </HeaderWork>
             </HeaderRight>
         </HeaderSection>
     )
