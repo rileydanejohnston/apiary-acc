@@ -3,7 +3,7 @@ import logo from '../../images/logo.svg';
 import logoT from '../../images/logoTipped.svg';
 import hamburger from '../../images/hamburger.svg';
 import menuExit from '../../images/menuExit.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { headerLinks } from '../../constants/headerConst';
 import Menu from "../menu/Menu";
 import uniqueId from 'lodash.uniqueid';
@@ -18,11 +18,15 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     }
 
-    window.addEventListener('resize', function () {
-        if (this.window.innerWidth > 1024) {
-            setMenuOpen(false)
+    useEffect(() => {
+        function checkWindow() {
+            if (window.innerWidth > 1024) {
+                setMenuOpen(false)
+            }
         }
-    });
+        window.addEventListener('resize', checkWindow);
+        return () => window.removeEventListener('resize', checkWindow);
+    })
 
     return (
         <HeaderSection>
