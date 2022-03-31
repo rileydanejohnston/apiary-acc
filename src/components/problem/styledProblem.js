@@ -8,6 +8,9 @@ export const ProblemWrapper = styled.section`
   @media( max-width: 1023px ) {
     padding: 80px 0;
   }
+  @media( max-width: 767px) {
+    padding-top: 40px;
+  }
 `;
 
 export const Grid = styled.div`
@@ -19,12 +22,14 @@ export const Grid = styled.div`
   gap: 80px 60px;
 
   @media( max-width: 1280px ) {
-    width: 95.9%;      // 982 / 1024
+    width: 982px;      // 982 / 1024 = 95.9%
     gap: 80px 20px;
+    grid-template-columns: repeat(3, minmax(314px, 347px));
   }
 
   @media( max-width: 1023px ) {
-    width: 94.7%;      // 727 / 768
+    width: 94.7%;      // 727 / 768 = 94.7%
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 226px 229px 300px;
     gap: 40px 20px;
   }
@@ -37,7 +42,11 @@ export const Grid = styled.div`
 `;
 
 export const Cell = styled.div`
+  @media( max-width: 1280px) {
+    width: 314px;
+  }
   @media( max-width: 1023px ) {
+    width: auto;
     grid-row: 3/4;
   }
   @media( max-width: 767px ) {
@@ -51,7 +60,13 @@ export const TitleWrapper = styled.div`
   grid-column: 2/4;
   margin-top: 56px;
 
+  @media(max-width: 1280px) {
+    max-width: 500px;
+    padding-left: 20px;
+  }
+
   @media( max-width: 1023px ) {
+    max-width: none;
     grid-column: 1/4;
     order: 1;
     margin: 0;
