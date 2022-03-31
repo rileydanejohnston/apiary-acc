@@ -1,7 +1,12 @@
 import { SectionTitle } from "../sharedComponents/sharedComponents"
-import { Box, BoxDiamond, BoxText, BoxTitle, BoxWrapper, Grid, GridCell, GridPic, GridText, ImpactWrapper, Row, SmallGrid, Table, TableData, TableHead, TablePic, TableText } from "./styledImpact"
+import { Box, BoxContain, BoxDiamond, BoxImage, BoxText, BoxTitle, BoxWrapper, Circles, Grid, GridCell, GridPic, GridText, ImageWrap, ImpactWrapper, Row, SmallGrid, Table, TableData, TableHead, TablePic, TableText } from "./styledImpact"
 import { ImpactData } from "../../constants/impactConst";
 import uniqueId from 'lodash.uniqueid'
+import rectleft from '../../images/rectleft.svg';
+import rectmiddle from '../../images/rectmiddle.svg';
+import rectright from '../../images/rectright.svg';
+import circles from '../../images/circles.svg';
+
 
 const {
     diamond,
@@ -18,15 +23,26 @@ const Impact = () => {
             <BoxWrapper>
                 {boxes.map(({ id, title, text }) => {
                     return (
-                        <Box key={id}>
-                            <BoxTitle>{title}</BoxTitle>
-                            <BoxDiamond src={diamond} />
-                            <BoxText>{text.line1}</BoxText>
-                            <BoxDiamond src={diamond} />
-                            <BoxText>{text.line2}</BoxText>
-                            <BoxDiamond src={diamond} />
-                            <BoxText>{text.line3}</BoxText>
-                        </Box>
+                        <BoxContain key={id}>
+                            {id === 1 ?
+                                <ImageWrap>
+                                    <BoxImage src={rectleft} />
+                                    <BoxImage src={rectmiddle} />
+                                    <BoxImage src={rectright} />
+                                </ImageWrap>
+                                :
+                                <Circles src={circles} />
+                            }
+                            <Box>
+                                <BoxTitle>{title}</BoxTitle>
+                                <BoxDiamond src={diamond} />
+                                <BoxText>{text.line1}</BoxText>
+                                <BoxDiamond src={diamond} />
+                                <BoxText>{text.line2}</BoxText>
+                                <BoxDiamond src={diamond} />
+                                <BoxText>{text.line3}</BoxText>
+                            </Box>
+                        </BoxContain>
                     )
                 })
                 }
