@@ -8,6 +8,7 @@ import {
   Item,
   ListGroup
 } from './styledSlide'
+import uniqueId from 'lodash.uniqueid';
 
 const Slide = ({ data }) => {
 
@@ -21,9 +22,9 @@ const Slide = ({ data }) => {
           <ListTitle>Features</ListTitle>
           <List>
             {
-              features.map((feature, index) => {
+              features.map((feature) => {
                 return (
-                  <Item key={index}>{feature}</Item>
+                  <Item key={uniqueId()}>{feature}</Item>
                 );
               })
             }
@@ -33,9 +34,9 @@ const Slide = ({ data }) => {
           <ListTitle>Sizing</ListTitle>
           <List>
             {
-              sizing.map((size, index) => {
+              sizing.map((size) => {
                 return (
-                  <Item key={index}>{size}</Item>
+                  <Item key={uniqueId()}>{size}</Item>
                 );
               })
             }
