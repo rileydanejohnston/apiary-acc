@@ -25,114 +25,6 @@ export const ImpactData = {
             }
         }
     ],
-    // table: {
-    //     headers: [
-    //         { content: logo },
-    //         {
-    //             content: 'Awesome Container Company',
-    //             color: 'orange'
-    //         },
-    //         { content: 'Deliver Zero' },
-    //         { content: 'Logistics Company' },
-    //         { content: 'Washing Facility' },
-    //         { content: 'Single-use plastics' }
-    //     ],
-    //     rows: [
-    //         [
-    //             {
-    //                 content: 'Save over 50% on supply costs',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Save real estate storage costs',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: dotB },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Inventory management',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Never reorder supplies',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Easy pickup and delivery',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: dotB },
-    //             { content: dotB },
-    //             { content: dotB }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Sustainable products',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: dotB },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'App for tracking and reporting',
-    //                 border: 'bottom',
-    //                 left: 'left'
-    //             },
-    //             {
-    //                 content: dotO,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: null,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: dotB,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: null,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: null,
-    //                 border: 'bottom'
-    //             }
-    //         ]
-    //     ]
-    // },
     table: [
         {
             pic: logo,
@@ -258,6 +150,56 @@ export const ImpactData = {
             bottom: 'bottom',
             right: 'right'
         }
+    ],
+    smallTable: [
+        {
+            pic: logo,
+            top: 'top'
+        },
+        {
+            content: 'Awesome Container Company',
+            color: 'orange',
+            top: 'top'
+        },
+        {
+            content: 'Save over 50% on supply costs',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Inventory management',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Never reorder supplies',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Easy pickup and delivery',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Easy pickup and delivery',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Sustainable products',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'App for tracking and reporting',
+            bottom: 'bottom',
+            left: 'left'
+        },
+        {
+            pic: dotO,
+            bottom: 'bottom'
+        },
     ]
 
 }

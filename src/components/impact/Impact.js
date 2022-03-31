@@ -1,10 +1,13 @@
 import { SectionTitle } from "../sharedComponents/sharedComponents"
-import { Box, BoxDiamond, BoxText, BoxTitle, BoxWrapper, Grid, GridCell, GridPic, GridText, ImpactWrapper, Row, Table, TableData, TableHead, TablePic, TableText } from "./styledImpact"
-import { ImpactData } from "../../constants/impact";
+import { Box, BoxDiamond, BoxText, BoxTitle, BoxWrapper, Grid, GridCell, GridPic, GridText, ImpactWrapper, Row, SmallGrid, Table, TableData, TableHead, TablePic, TableText } from "./styledImpact"
+import { ImpactData } from "../../constants/impactConst";
+import uniqueId from 'lodash.uniqueid'
+
 const {
     diamond,
     boxes,
-    table
+    table,
+    smallTable
 } = ImpactData;
 
 const Impact = () => {
@@ -34,7 +37,7 @@ const Impact = () => {
                     if (cell.hasOwnProperty('pic')) {
                         return (
                             <GridCell
-                                key={table.indexOf(cell)}
+                                key={uniqueId()}
                                 right={cell.right}
                                 bottom={cell.bottom}
                                 top={cell.top}>
@@ -45,7 +48,7 @@ const Impact = () => {
                     else if (cell.hasOwnProperty('content')) {
                         return (
                             <GridCell
-                                key={table.indexOf(cell)}
+                                key={uniqueId()}
                                 right={cell.right}
                                 bottom={cell.bottom}
                                 top={cell.top}>
@@ -58,6 +61,35 @@ const Impact = () => {
                     }
                 })}
             </Grid>
+            <SmallGrid>
+                {smallTable.map((cell) => {
+                    if (cell.hasOwnProperty('pic')) {
+                        return (
+                            <GridCell
+                                key={uniqueId()}
+                                right={cell.right}
+                                bottom={cell.bottom}
+                                top={cell.top}>
+                                <GridPic src={cell.pic} />
+                            </GridCell>
+                        )
+                    }
+                    else if (cell.hasOwnProperty('content')) {
+                        return (
+                            <GridCell
+                                key={uniqueId()}
+                                right={cell.right}
+                                bottom={cell.bottom}
+                                top={cell.top}>
+                                <GridText
+                                    top={cell.top}
+                                    orange={cell.color}>
+                                    {cell.content}</GridText>
+                            </GridCell>
+                        )
+                    }
+                })}
+            </SmallGrid>
         </ImpactWrapper>
     )
 }

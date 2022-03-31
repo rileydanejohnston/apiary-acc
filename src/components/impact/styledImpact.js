@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Highlight } from "../sharedComponents/sharedComponents";
 
 export const ImpactWrapper = styled.section`
     background: #F4F4F4;
@@ -11,8 +12,13 @@ export const BoxWrapper = styled.div`
     width: 94.44%;
     justify-content: space-between;
     margin: 60px auto 120px auto;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 `
 export const Box = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,8 +27,13 @@ export const Box = styled.div`
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
+
+    @media (max-width: 600px) {
+        margin: 0 auto 80px;
+        width: 75%;
+    }
 `
-export const BoxTitle = styled.p`
+export const BoxTitle = styled(Highlight)`
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -40,7 +51,7 @@ export const BoxText = styled.p`
 
     &:last-of-type {
         margin-bottom: 60px;
-    }
+    }  
 `
 export const BoxDiamond = styled.img`
     width: 10px;
@@ -48,13 +59,32 @@ export const BoxDiamond = styled.img`
     margin: 20px 0;
 `
 export const Grid = styled.div`
-    width: 83.33%;
+    width: 83.33%; 
     display: grid;
     margin: 60px auto 0 auto;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(8, 1fr);
     border-radius: 20px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 1024px) {
+        width: 96.09%;     // 984/1024
+    }
+
+    @media (max-width: 425px) {
+        display: none;
+    }
+`
+export const SmallGrid = styled(Grid)`
+    width: 96.09%;
+    margin: 30px auto 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    display: none;
+
+    @media (max-width: 425px) {
+        display: grid;
+    }
 `
 export const GridCell = styled.div`
     border-right: ${props => props.right ? 'none' : '1px solid gray'};
@@ -70,45 +100,12 @@ export const GridText = styled.p`
     font-size: 18px;
     line-height: 21px;
     text-align: ${props => props.top ? 'center' : null};
-    color: ${props => props.orange ? '#FF9820' : 'inherit'}
+    color: ${props => props.orange ? '#FF9820' : 'inherit'};
+
+    @media (max-width: 600px) {
+        font-size: 12px;
+        line-height: 14px;
+    }
 `
 export const GridPic = styled.img`
 `
-// export const Table = styled.table`
-//     width: 83.33%;
-//     margin: 60px auto 0 auto;
-//     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-//     border-radius: 20px;
-// `
-// export const Row = styled.tr`
-// `
-// export const TableHead = styled.th`
-//     width: 16.82%;
-//     height: 80px;
-//     border-bottom: 1px solid gray;
-//     border-right: 1px solid gray;
-
-//     &:last-of-type {
-//         border-right: none;
-//     }
-// `
-// export const TableData = styled.td`
-//     width: 16.82%;
-//     max-height: 82px;
-//     border-right: 1px solid gray;
-//     border-bottom: ${props => props.border ? 'none' : '1px solid gray'};
-//     text-align: ${props => props.left ? null : 'center'};
-
-//     &:last-of-type {
-//         border-right: none;
-//     }
-// `
-// export const TableText = styled.p`
-//     margin: ${props => props.left ? '18.5px' : null};
-//     font-weight: normal;
-//     font-size: 18px;
-//     line-height: 21px;
-//     color: ${props => props.orange ? '#FF9820' : 'inherit'}
-// `
-// export const TablePic = styled.img`
-// `
