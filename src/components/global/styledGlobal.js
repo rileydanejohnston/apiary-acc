@@ -5,7 +5,7 @@ import SpineSansRegWoff from '../../vendor/fonts/SplineSans-Regular.woff';
 import SpineSansRegWoff2 from '../../vendor/fonts/SplineSans-Regular.woff2';
 import SpineSansBoldWoff from '../../vendor/fonts/SplineSans-Bold.woff';
 import SpineSansBoldWoff2 from '../../vendor/fonts/SplineSans-Bold.woff2';
- 
+
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
 
@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   body {

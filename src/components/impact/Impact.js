@@ -10,7 +10,7 @@ const {
 const Impact = () => {
 
     return (
-        <ImpactWrapper>
+        <ImpactWrapper id='impact'>
             <SectionTitle>Impact</SectionTitle>
             <BoxWrapper>
                 {boxes.map(({ id, title, text }) => {
