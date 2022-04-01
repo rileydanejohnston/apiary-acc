@@ -30,7 +30,7 @@ const App = () => {
       <Header
         openPopup={openPopup} />
       <Home />
-      {/* <Problem />
+      <Problem />
       <Sustainable />
       <How
         openPopup={openPopup} />
@@ -42,7 +42,7 @@ const App = () => {
       <Footer />
       <Form
         open={popupOpen}
-        closePopup={closePopup} /> */}
+        closePopup={closePopup} />
     </AppWrapper>
   );
 }
