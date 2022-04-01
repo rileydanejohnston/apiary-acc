@@ -1,12 +1,32 @@
-import { HeaderLeft, HeaderLink, HeaderLogo, HeaderRight, HeaderSection, HeaderTitle, HeaderWork } from "./styledHeader"
+import { Hamburger, HeaderLeft, HeaderLink, HeaderLogo, HeaderNav, HeaderRight, HeaderSection, HeaderTitle, HeaderWork } from "./styledHeader"
 import logo from '../../images/logo.svg';
 import logoT from '../../images/logoTipped.svg';
-import { useState } from 'react';
-import { headerLinks } from '../../constants/header';
+import hamburger from '../../images/hamburger.svg';
+import menuExit from '../../images/menuExit.svg';
+import { useState, useEffect } from 'react';
+import { headerLinks } from '../../constants/headerConst';
+import Menu from "../menu/Menu";
+import uniqueId from 'lodash.uniqueid';
 
 const Header = (props) => {
 
     const [image, setImage] = useState(logo);
+
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    }
+
+    useEffect(() => {
+        function checkWindow() {
+            if (window.innerWidth > 1024) {
+                setMenuOpen(false)
+            }
+        }
+        window.addEventListener('resize', checkWindow);
+        return () => window.removeEventListener('resize', checkWindow);
+    })
 
     return (
         <HeaderSection>
@@ -18,20 +38,28 @@ const Header = (props) => {
                 <HeaderTitle>Awesome Container Company</HeaderTitle>
             </HeaderLeft>
             <HeaderRight>
-                {headerLinks.map((link) => {
-                    return (
-                        <HeaderLink
-                            href={link.id}
-                            key={headerLinks.indexOf(link)}>
-                            {link.name}
-                        </HeaderLink>
-                    )
-                })}
+                <Hamburger src={menuOpen ? menuExit : hamburger}
+                    onClick={toggleMenu} />
+                <HeaderNav>
+                    {headerLinks.map((link) => {
+                        return (
+                            <HeaderLink
+                                key={uniqueId()}
+                                href={link.id}>
+                                {link.name}
+                            </HeaderLink>
+                        )
+                    })}
+                </HeaderNav>
                 <HeaderWork
                     onClick={props.openPopup}>
                     Work with us
                 </HeaderWork>
             </HeaderRight>
+            {menuOpen &&
+                <Menu
+                    toggleMenu={toggleMenu} />
+            }
         </HeaderSection>
     )
 }
