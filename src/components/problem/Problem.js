@@ -27,7 +27,7 @@ const {
 
 const Problem = () => {
   return (
-    <ProblemWrapper>
+    <ProblemWrapper id='problem'>
       <Grid>
         <StatCell>
           <StatTitle>{statTitle}</StatTitle>
@@ -38,7 +38,7 @@ const Problem = () => {
         </StatCell>
         <TitleWrapper>
           <Title>
-            {problemTitle.part1}<br/>
+            {problemTitle.part1}<br />
             {problemTitle.part2}
           </Title>
           <Subtitle>
@@ -55,9 +55,9 @@ const Problem = () => {
               <Cell>
                 <Image src={image} alt={altText} />
                 {
-                  caption.hasOwnProperty('part2') ? 
-                  <ImgCaption>{caption.part1}<br/>{caption.part2}</ImgCaption> :
-                  <ImgCaption>{caption.part1}</ImgCaption>
+                  caption.hasOwnProperty('part2') ?
+                    <ImgCaption>{caption.part1}<br />{caption.part2}</ImgCaption> :
+                    <ImgCaption>{caption.part1}</ImgCaption>
                 }
               </Cell>
             )

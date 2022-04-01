@@ -9,7 +9,7 @@ const {
 const Footer = () => {
 
     return (
-        <FooterWrapper>
+        <FooterWrapper id='contacts'>
             <FooterBlocks>
                 {blocks.map((data) => {
                     if (data.hasOwnProperty('text1')) {
