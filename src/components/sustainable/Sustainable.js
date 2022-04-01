@@ -17,7 +17,6 @@ const {
 const Sustainable = () => {
 
   return (
-<<<<<<< HEAD
     <SustainableWrapper>
       <TitlesGroup>
         <Title>{title}</Title>
@@ -28,33 +27,6 @@ const Sustainable = () => {
       </TitlesGroup>
       <Carousel />
       <Benefits />
-=======
-    <SustainableWrapper id='solution'>
-      <SustainableContent>
-        <TitlesGroup>
-          <Title>{title}</Title>
-          <Subtitle>
-            <Highlight>{subtitle.highlight}</Highlight>
-            {subtitle.normal}
-          </Subtitle>
-        </TitlesGroup>
-        <Carousel />
-        <BenefitsSection>
-          <LogisticsGroup>
-            <ContainerImg />
-            <BenefitText>{logisticText}</BenefitText>
-          </LogisticsGroup>
-          <SupplyGroup>
-            <Circle />
-            <BenefitText>{supplyText}</BenefitText>
-          </SupplyGroup>
-          <StorageGroup>
-            <Circle />
-            <BenefitText>{storageText}</BenefitText>
-          </StorageGroup>
-        </BenefitsSection>
-      </SustainableContent>
->>>>>>> feat/header
     </SustainableWrapper>
   )
 }
