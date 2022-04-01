@@ -1,20 +1,46 @@
 import styled from "styled-components";
 
-export const FooterWrapper = styled.footer`
-    display: flex;
-    flex-direction: column;
+export const FooterSection = styled.footer`
     background: #1C383C;
     padding: 80px 0 60px 0;
 `
+export const FooterWrapper = styled.div`
+    width: 88.89%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width: 1024px) {
+        width: 84.38%;
+    }
+`
 export const FooterBlocks = styled.div` 
     display: flex;
-    width: 88.89%;
     justify-content: space-between;
+    width: 100%;
     margin: auto;
+
+    @media (max-width: 1100px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(238px, 1fr));
+        grid-column-gap: 180px;
+    }
+
+    @media(max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
 `
 export const Block = styled.div`
     display: flex;
     flex-direction: column;
+    order: ${props => props.$order && 3};
+
+    @media(max-width: 768px) {
+        border-bottom: 1px solid white;
+        margin-bottom: 20px;
+    }
 `
 export const BlockTitle = styled.h3`
     font-style: normal;
@@ -23,6 +49,11 @@ export const BlockTitle = styled.h3`
     line-height: 52px;
     color: #FFFFFF;
     margin-bottom: 40px;
+
+    @media(max-width: 425px) {
+        font-size: 36px;
+        line-height: 40px;
+    }
 `
 export const TextBlock = styled.div`
     display: flex;
@@ -65,6 +96,4 @@ export const Link = styled.a`
 `
 export const FooterBottom = styled.div`
     display: flex;
-    width: 88.89%;
-    margin-left: 5.55%;
 `
