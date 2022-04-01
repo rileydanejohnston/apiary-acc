@@ -6,16 +6,16 @@ import {
   TitleWrapper,
   Title,
   Subtitle,
-  Highlight,
-  StatCell,
+  CircleCell,
   CircleGraph,
-  WasteStat,
-  RecycleStat,
-  StatTitle,
+  CircleStat,
+  CircleTitle,
   Image,
   ImgCaption
 } from './styledProblem'
 import { ProblemData } from '../../constants/problem'
+import uniqueId from 'lodash.uniqueid';
+import { Highlight } from '../sharedComponents/sharedComponents';
 const {
   statTitle,
   wasteStat,
@@ -29,18 +29,21 @@ const Problem = () => {
   return (
     <ProblemWrapper id='problem'>
       <Grid>
-        <StatCell>
-          <StatTitle>{statTitle}</StatTitle>
+        <CircleCell>
+          <CircleTitle>{statTitle}</CircleTitle>
           <CircleGraph>
-            <WasteStat>{wasteStat}</WasteStat>
-            <RecycleStat>{recycleStat}</RecycleStat>
+            <CircleStat
+              position={wasteStat.position}
+            >
+              {wasteStat.text}</CircleStat>
+            <CircleStat 
+              position={recycleStat.position}
+            >
+              {recycleStat.text}</CircleStat>
           </CircleGraph>
-        </StatCell>
+        </CircleCell>
         <TitleWrapper>
-          <Title>
-            {problemTitle.part1}<br />
-            {problemTitle.part2}
-          </Title>
+          <Title>{problemTitle}</Title>
           <Subtitle>
             {subtitle.normal1}
             <Highlight>{subtitle.highlight1}</Highlight>
@@ -52,13 +55,9 @@ const Problem = () => {
         {
           images.map(({ image, altText, caption }) => {
             return (
-              <Cell>
+              <Cell key={uniqueId()}>
                 <Image src={image} alt={altText} />
-                {
-                  caption.hasOwnProperty('part2') ?
-                    <ImgCaption>{caption.part1}<br />{caption.part2}</ImgCaption> :
-                    <ImgCaption>{caption.part1}</ImgCaption>
-                }
+                <ImgCaption>{caption}</ImgCaption>
               </Cell>
             )
           })
