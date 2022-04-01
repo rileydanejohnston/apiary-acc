@@ -1,26 +1,26 @@
 export const headerLinks = [
     {
         name: 'The Problem',
-        id: 'problem'
+        id: '#problem'
     },
     {
         name: 'Sustainable Solution',
-        id: 'solution'
+        id: '#solution'
     },
     {
         name: 'Impact',
-        id: 'impact'
+        id: '#impact'
     },
     {
         name: 'Pricing',
-        id: 'pricing'
+        id: '#pricing'
     },
     {
         name: 'Team',
-        id: 'team'
+        id: '#team'
     },
     {
         name: 'Contacts',
-        id: 'contacts'
+        id: '#contacts'
     }
 ]

@@ -27,7 +27,7 @@ const {
 
 const Problem = () => {
   return (
-    <ProblemWrapper>
+    <ProblemWrapper id='problem'>
       <Grid>
         <CircleCell>
           <CircleTitle>{statTitle}</CircleTitle>
