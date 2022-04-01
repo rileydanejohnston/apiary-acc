@@ -24,12 +24,13 @@ export const HomeGraphics = styled.div`
     justify-content: space-between;
 `
 export const HomePicContainer = styled.div`
-    max-width: 46.39%;
+    width: 46.39%;
 `
-export const HomePic = styled.img`
+export const HomePic = styled.div`
     width: 100%;
-    height: 98.6%;
+    height: 92.48%;
     border-radius: 20px;
+    overflow: hidden;
 `
 export const HomePicTextContainer = styled.div`
     display: flex;
@@ -42,4 +43,8 @@ export const HomePicText = styled.p`
     font-size: 14px;
     line-height: 17px;
     margin-top: 13px;
+`
+export const Handle = styled.img`
+    height: 28px;
+    widht: 28px;
 `
