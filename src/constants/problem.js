@@ -1,15 +1,36 @@
-import turtle from '../images/turtle.svg';
-import bottles from '../images/bottles.svg';
-import trash from '../images/plastic-wrappers.svg';
+import turtle from '../images/turtle.png';
+import bottles from '../images/bottles.png';
+import trash from '../images/plastic-wrappers.png';
 
 export const ProblemData = {
   statTitle: 'Single-use plastics',
-  wasteStat: '91% Waste',
-  recycleStat: '9% Recycled',
-  problemTitle: {
-    part1: 'Single-use packaging:',
-    part2: 'bad for the planet, bad for business'
+  wasteStat: {
+    text: '91% Waste',
+    position: {
+      over1024: {
+        top: '59px',
+        left: '59px'
+      },
+      under1024: {
+        top: '48px',
+        left: '32px'
+      }
+    }
   },
+  recycleStat: {
+    text: '9% Recycled',
+    position: {
+      over1024: {
+        top: '164px',
+        left: '88px'
+      },
+      under1024: {
+        top: '107px',
+        left: '48px'
+      },
+    }
+  },
+  problemTitle: 'Single-use packaging: bad for the planet, bad for business',
   subtitle: {
     normal1: 'Millions of tons of single-use packaging ',
     highlight1: 'end up in landfills and oceans',
@@ -21,25 +42,17 @@ export const ProblemData = {
     {
       image: turtle,
       altText: 'Sea Turtle',
-      caption: {
-        part1: 'Single-use plastics pollute oceans and',
-        part2: 'kill marine species'
-      }
+      caption: 'Single-use plastics pollute oceans and kill marine species'
     },
     {
       image: bottles,
       altText: 'An endless sea of plastic bottles',
-      caption: {
-        part1: 'Single-use plastics pollute landfills and ',
-        part2: 'emit dangerous chemicals and greenshouse gases'
-      }
+      caption: 'Single-use plastics pollute landfills and emit dangerous chemicals and greenshouse gases'
     },
     {
       image: trash,
       altText: 'A person standing over a table covered with plastic wrappers',
-      caption: {
-        part1: 'Not all of the single-use plastics are recyclable'
-      }
+      caption: 'Not all of the single-use plastics are recyclable'
     }
   ]
 };
