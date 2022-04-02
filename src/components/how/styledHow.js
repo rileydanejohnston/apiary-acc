@@ -35,12 +35,24 @@ export const HowTitle = styled.h2`
   line-height: 52px;
   letter-spacing: 0em;
   margin-bottom: 42px;
+
+  @media( max-width: 767px) {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
 `;
 
 export const Highlighter = styled(Highlight)`
   margin-top: 20px;
   line-height: 21px;
   order: 1;
+
+  @media( max-width: 767px) {
+    order: 15;
+    margin-top: 0;
+  }
 `;
 
 export const StepsWrapper = styled.div`
@@ -51,6 +63,11 @@ export const StepsWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @media( max-width: 767px) {
+    height: auto;
+    margin-bottom: 60px;
+  }
 `;
 
 export const WorkButton = styled(WorkWithUs)`

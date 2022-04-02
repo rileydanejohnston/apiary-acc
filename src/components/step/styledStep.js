@@ -1,5 +1,4 @@
 import styled from "styled-components/macro";
-import topLeftImg from '../../images/up-right-arrow.svg'
 
 export const StepWrapper = styled.div`
   width: ${({ styles }) => (styles.width)};
@@ -14,12 +13,15 @@ export const StepWrapper = styled.div`
   @media( max-width: 767px) {
     width: 343px;
     position: static;
+    order: 0;
+  }
+  @media( max-width: 374px) {
+    width: 100%;
   }
 `;
 
 export const Image = styled.div`
-  background: center / cover no-repeat;
-  background-image: url(${({ styles }) => (styles.img)});
+  background: center / cover no-repeat url(${({ styles }) => (styles.img)});
   width: ${({ styles }) => (styles.width)};
   height: ${({ styles }) => (styles.height)};
 `;
@@ -32,26 +34,35 @@ export const Text = styled.p`
   text-align: center;
   white-space: pre-line;
   margin-top: ${({ styles }) => (styles)};
-`;
-
-export const ArrowBase = styled.div`
-  width: 46px;
-  height: 46px;
-  position: absolute;
 
   @media( max-width: 767px) {
-    position: static;
+    margin-top: 30px;
   }
 `;
 
-export const Arrow = styled(ArrowBase)`
-  background: center / cover no-repeat url(${topLeftImg});
+export const Arrow = styled.div`
   position: absolute;
+  background: center / cover no-repeat url(${({ styles }) => (styles.img.desktop)});
+  width: ${({ styles }) => (styles.size.desktop.width)};
+  height: ${({ styles }) => (styles.size.desktop.height)};
   top: ${({ styles }) => (styles.top)};
   left: ${({ styles }) => (styles.left.desktop)};
   transform: rotate(${({ styles }) => (styles.deg)});
 
   @media( max-width: 1280px) {
     left: ${({ styles }) => (styles.left.laptop)};
+  }
+
+  @media( max-width: 767px) {
+    position: static;
+    background-image: url(${({ styles }) => (styles.img.mobile)});
+    width: ${({ styles }) => (styles.size.mobile.width)};
+    height: ${({ styles }) => (styles.size.mobile.height)};
+    transform: rotate(0deg);
+    margin: 40px 0;
+
+    &:last-of-type {
+      margin: 47px 0 30.5px 0;
+    }
   }
 `;

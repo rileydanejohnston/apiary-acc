@@ -2,7 +2,9 @@ import phoneImg from '../images/phone.svg';
 import containerImg from '../images/container-monster.svg';
 import truckImg from '../images/truck.svg';
 import starsImg from '../images/stars.svg';
-import topLeftImg from '../images/up-right-arrow.svg'
+import curveArrow from '../images/up-right-arrow.svg';
+import straightArrow from '../images/straight-arrow.svg';
+import mobile180Arrow from '../images/mobile-u-arrow.svg';
 
 export const HowData = {
   title: 'How it works?',
@@ -36,6 +38,20 @@ export const HowInfo = {
       textMargin: '18px',
       // arrow
       arrowStyles: {
+        img: {
+          desktop: curveArrow,
+          mobile: straightArrow
+        },
+        size: {
+          desktop: {
+            width: '46px',
+            height: '46px'
+          },
+          mobile: {
+            width: '18.33px',
+            height: '33px'
+          }
+        },
         top: '136px',
         left: {
           desktop: '69.35%',        /*  860 /  1240  */
@@ -64,6 +80,20 @@ export const HowInfo = {
       textMargin: '30px',
       // arrow
       arrowStyles: {
+        img: {
+          desktop: curveArrow,
+          mobile: straightArrow
+        },
+        size: {
+          desktop: {
+            width: '46px',
+            height: '46px'
+          },
+          mobile: {
+            width: '18.33px',
+            height: '33px'
+          }
+        },
         top: '480px',
         left: {
           desktop: '69.35%',        /*  860 /  1240  */
@@ -91,6 +121,20 @@ export const HowInfo = {
       textMargin: '26.7px',
       // arrow
       arrowStyles: {
+        img: {
+          desktop: curveArrow,
+          mobile: straightArrow
+        },
+        size: {
+          desktop: {
+            width: '46px',
+            height: '46px'
+          },
+          mobile: {
+            width: '18.33px',
+            height: '33px'
+          }
+        },
         top: '480px',
         left: {
           desktop: '27.82%',        /*  345 /  1240  */
@@ -121,6 +165,20 @@ export const HowInfo = {
       textMargin: '7px',
       // arrow
       arrowStyles: {
+        img: {
+          desktop: curveArrow,
+          mobile: mobile180Arrow
+        },
+        size: {
+          desktop: {
+            width: '46px',
+            height: '46px'
+          },
+          mobile: {
+            width: '65px',
+            height: '92px'
+          }
+        },
         top: '136px',
         left: {
           desktop: '27.82%',        /*  345 /  1240  */
