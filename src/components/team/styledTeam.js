@@ -8,7 +8,7 @@ export const TeamWrapper = styled.section`
     margin: auto;
     padding: 0 0 136px;
 
-    @media(max-width: 1024px) {
+    @media(max-width: 1439px) {
         width: 75.39%;
     }
 
@@ -22,7 +22,7 @@ export const TeamBlocks = styled.ul`
     margin: 80px auto 120.8px auto;
     width: 100%;
 
-    @media(max-width: 600px) {
+    @media(max-width: 750px) {
         flex-direction: column;
     }
 `
@@ -33,7 +33,7 @@ export const TeamBlock = styled.li`
     align-items: center;
     width: 25.91%;  // 200/772
 
-    @media(max-width: 600px) {
+    @media(max-width: 750px) {
         margin: 0 auto 30px;
         width: 50%;
     }
@@ -43,7 +43,7 @@ export const TeamImage = styled.img`
     height: 146px;
     margin-bottom: 20px;
 
-    @media(max-width: 600px) {
+    @media(max-width: 750px) {
         width: 200px;
         height: 200px;
     }
@@ -59,7 +59,7 @@ export const TeamText = styled.p`
         font-size: 18px;
         line-height: 22px;
     }
-    @media(max-width: 600px) {
+    @media(max-width: 750px) {
         font-size: 24px;
         line-height: 28px;
     }

@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <AppWrapper>
-      <Header
+      {/* <Header
         openPopup={openPopup} />
       <Home />
       <Problem />
@@ -37,7 +37,7 @@ const App = () => {
       <Impact />
       <Esg />
       <Price
-        openPopup={openPopup} />
+        openPopup={openPopup} /> */}
       <Team />
       <Footer />
       <Form
