@@ -5,28 +5,17 @@ import {
   HowTitle,
   StepsWrapper,
   WorkButton,
-  StepGroup,
-  StepGroupTruck,
-  Phone,
-  Containers,
-  StepText,
   Highlighter,
-  Truck,
-  Stars,
-  StepGroupStars,
-  Arrow,
-
 } from './styledHow'
-import { HowData } from '../../constants/howConst'
+import { HowInfo } from '../../constants/howConst'
+import Step from '../step/Step';
+import uniqueId from 'lodash.uniqueid';
 const {
   title,
-  step1,
-  step2,
-  step3,
-  step4,
+  steps,
   highlighter,
   buttonText
-} = HowData;
+} = HowInfo;
 
 const How = (props) => {
 
@@ -35,27 +24,14 @@ const How = (props) => {
       <HowContent>
         <HowTitle>{title}</HowTitle>
         <StepsWrapper>
-          <StepGroup>
-            <Phone />
-            <StepText>{step1}</StepText>
-          </StepGroup>
+          {
+            steps.map((step, index) => {
+              return (
+                <Step step={step} key={uniqueId()} order={index * 2} />
+              )
+            })
+          }
           <Highlighter>{highlighter}</Highlighter>
-          <StepGroup>
-            <Containers />
-            <StepText>{step3}</StepText>
-          </StepGroup>
-          <StepGroupTruck>
-            <Truck />
-            <StepText>{step2}</StepText>
-          </StepGroupTruck>
-          <StepGroupStars>
-            <Stars />
-            <StepText>{step4}</StepText>
-          </StepGroupStars>
-          <Arrow top='136px' left='27.82%' deg='0deg' />
-          <Arrow top='136px' left='69.35%' deg='90deg' />
-          <Arrow top='480px' left='69.35%' deg='180deg' />
-          <Arrow top='480px' left='27.82%' deg='270deg' />
         </StepsWrapper>
         <WorkButton
           onClick={props.openPopup}>
