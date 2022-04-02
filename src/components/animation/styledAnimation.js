@@ -7,7 +7,20 @@ export const AnimationWrapper = styled.div`
   justify-content: center;
   align-items: end;
   padding-bottom: 26px;
-`;
+
+  @media(max-width: 1200px) {
+    width: 44.2%;
+  }
+
+  @media (max-width: 900px) {
+    margin: 0 auto 0;
+    width: 58.52%;
+  }
+
+  @media (max-width: 525px) {
+    width: 93%;
+  }
+  `;
 
 export const TextMessages = styled(motion.ul)`
   width: 79.9%;      // 391 / 491
