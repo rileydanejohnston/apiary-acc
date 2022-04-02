@@ -37,8 +37,12 @@ export const HowInfo = {
       // arrow
       arrowStyles: {
         top: '136px',
-        left: '69.35%',
+        left: {
+          desktop: '69.35%',        /*  860 /  1240  */
+          laptop: '71.75%'          /*  706 /  984  */
+        },
         deg: '90deg'
+        
       }
     },
     {
@@ -61,7 +65,10 @@ export const HowInfo = {
       // arrow
       arrowStyles: {
         top: '480px',
-        left: '69.35%',
+        left: {
+          desktop: '69.35%',        /*  860 /  1240  */
+          laptop: '71.75%'          /*  706 /  984  */
+        },
         deg: '180deg'
       }
     },
@@ -85,8 +92,14 @@ export const HowInfo = {
       // arrow
       arrowStyles: {
         top: '480px',
-        left: '27.82%',
+        left: {
+          desktop: '27.82%',        /*  345 /  1240  */
+          laptop: '25.81%'          /*  254 /  984  */
+        },
         deg: '270deg'
+
+        
+        /*  860 /  1240  = 69.35%  */
       }
     },
     {
@@ -109,8 +122,14 @@ export const HowInfo = {
       // arrow
       arrowStyles: {
         top: '136px',
-        left: '27.82%',
+        left: {
+          desktop: '27.82%',        /*  345 /  1240  */
+          laptop: '25.81%'          /*  254 /  984  */
+        },
         deg: '0deg'
+
+        /*  345 /  1240  = 27.82%  */
+        /*  860 /  1240  = 69.35%  */
       }
     },
   ],

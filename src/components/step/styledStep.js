@@ -48,9 +48,10 @@ export const Arrow = styled(ArrowBase)`
   background: center / cover no-repeat url(${topLeftImg});
   position: absolute;
   top: ${({ styles }) => (styles.top)};
-  left: ${({ styles }) => (styles.left)};
+  left: ${({ styles }) => (styles.left.desktop)};
   transform: rotate(${({ styles }) => (styles.deg)});
 
-  /*  345 /  1240  = 27.82%  */
-  /*  860 /  1240  = 69.35%  */
+  @media( max-width: 1280px) {
+    left: ${({ styles }) => (styles.left.laptop)};
+  }
 `;

@@ -1,11 +1,6 @@
 import styled from "styled-components/macro";
 import { WorkWithUs } from '../sharedComponents/sharedComponents';
 import { Highlight } from '../sharedComponents/sharedComponents'
-import phoneImg from '../../images/phone.svg';
-import containerImg from '../../images/container-monster.svg';
-import truckImg from '../../images/truck.svg';
-import starsImg from '../../images/stars.svg';
-import topLeftImg from '../../images/up-right-arrow.svg'
 
 export const HowWrapper = styled.section`
   padding: 80px 0 100px 0;
@@ -25,11 +20,11 @@ export const HowContent = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media( max-width: 1023px) {
+  @media( max-width: 1280px) {
     width: 96.09%;    // 984 / 1024
   }
 
-  @media( max-width: 767px) {
+  @media( max-width: 1023px) {
     width: 100%;
   }
 `;
