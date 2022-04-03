@@ -76,6 +76,7 @@ export const HomePic = styled.div`
     width: 100%;
     height: 92.48%;
     border-radius: 20px;
+    border: 1px solid #1C383C;
     overflow: hidden;
 
     @media (max-width: 1024px) {
