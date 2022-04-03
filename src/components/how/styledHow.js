@@ -6,10 +6,6 @@ export const HowWrapper = styled.section`
   padding: 80px 0 100px 0;
 
   @media( max-width: 1023px) {
-    padding: 60px 0;
-  }
-
-  @media( max-width: 767px) {
     padding: 60px 16px;
   }
 `;
@@ -36,10 +32,13 @@ export const HowTitle = styled.h2`
   letter-spacing: 0em;
   margin-bottom: 42px;
 
+  @media( max-width: 1023px) {
+    text-align: center;
+  }
+
   @media( max-width: 767px) {
     font-size: 28px;
     line-height: 32px;
-    text-align: center;
     margin-bottom: 60px;
   }
 `;
@@ -64,7 +63,7 @@ export const StepsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media( max-width: 767px) {
+  @media( max-width: 1023px) {
     height: auto;
     margin-bottom: 60px;
   }

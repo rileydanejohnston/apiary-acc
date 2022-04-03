@@ -10,7 +10,7 @@ export const StepWrapper = styled.div`
   left: ${({ styles }) => (styles.left)};
   order: ${({ order }) => (order)};
 
-  @media( max-width: 767px) {
+  @media( max-width: 1023px) {
     width: 343px;
     position: static;
     order: 0;
@@ -35,7 +35,7 @@ export const Text = styled.p`
   white-space: pre-line;
   margin-top: ${({ styles }) => (styles)};
 
-  @media( max-width: 767px) {
+  @media( max-width: 1023px) {
     margin-top: 30px;
   }
 `;
@@ -53,7 +53,7 @@ export const Arrow = styled.div`
     left: ${({ styles }) => (styles.left.laptop)};
   }
 
-  @media( max-width: 767px) {
+  @media( max-width: 1023px) {
     position: static;
     background-image: url(${({ styles }) => (styles.img.mobile)});
     width: ${({ styles }) => (styles.size.mobile.width)};
