@@ -39,7 +39,7 @@ const App = () => {
       <Price
         openPopup={openPopup} /> */}
       <Team />
-      <Footer />
+      {/* <Footer /> */}
       <Form
         open={popupOpen}
         closePopup={closePopup} />

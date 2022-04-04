@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import linkedin from '../../images/linkedin.svg';
+import { SectionTitle } from "../sharedComponents/sharedComponents";
 
 export const TeamWrapper = styled.section`
     display: flex;
@@ -14,6 +15,12 @@ export const TeamWrapper = styled.section`
 
     @media(max-width: 600px) {
         padding-bottom: 60px;
+    }
+`
+export const TeamTitle = styled(SectionTitle)`
+    @media (max-width: 750px) {
+        font-size: 28px;
+        line-height: 33.18px;
     }
 `
 export const TeamBlocks = styled.ul`
@@ -81,7 +88,7 @@ export const PartnerRow1 = styled.div`
 
     @media(max-width: 600px) {
         flex-direction: column;
-        margin: 80px auto 0;
+        margin: 0 auto;
     }
 `
 export const PartnerRow2 = styled.div`
@@ -93,17 +100,14 @@ export const PartnerRow2 = styled.div`
 
     @media(max-width: 600px) {
         flex-direction: column;
+        width: 100%;
     }
 `
 export const PartnerLink = styled.a`
     cursor: pointer;
 
     @media(max-width: 600px) {
-        &:first-of-type {
-            margin-top: -15px;
-        }
-        &:nth-of-type(3n) {
-            margin: 30px 0;
+        margin: 40px auto 0;
         }
     }
 `
@@ -115,5 +119,9 @@ export const Partner = styled.img`
 @media(max-width: 600px) {
     max-width: none;
     max-height: none;
+}
+
+@media (max-width: 400px) {
+    max-width: 242px;
 }
 `
