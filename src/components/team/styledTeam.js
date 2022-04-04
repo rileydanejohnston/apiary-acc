@@ -9,11 +9,11 @@ export const TeamWrapper = styled.section`
     padding: 0 0 136px;
 
     @media(max-width: 1439px) {
-        width: 75.39%;
+        width: 78.125%;
     }
 
     @media(max-width: 600px) {
-        padding-bottom: 80px;
+        padding-bottom: 60px;
     }
 `
 export const TeamBlocks = styled.ul`
@@ -24,6 +24,7 @@ export const TeamBlocks = styled.ul`
 
     @media(max-width: 750px) {
         flex-direction: column;
+        margin: 44px auto 100px;
     }
 `
 export const TeamBlock = styled.li`
@@ -34,7 +35,7 @@ export const TeamBlock = styled.li`
     width: 25.91%;  // 200/772
 
     @media(max-width: 750px) {
-        margin: 0 auto 30px;
+        margin: 0 auto 44px;
         width: 50%;
     }
 `
