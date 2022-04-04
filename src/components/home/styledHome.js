@@ -31,11 +31,11 @@ export const Title = styled.h1`
     @media (max-width: 900px) {
         font-size: 42px;
         line-height: 48px;
+        margin: 0 auto 40px;
     }
 
     @media (max-width: 525px) {
         width: 100%;
-        margin: 0 auto 40px;
         font-size: 28px;
         line-height: 34px;
     }
@@ -56,7 +56,6 @@ export const HomeGraphics = styled.div`
 export const HomePicContainer = styled.div`
     width: 46.39%;
     height: 39%;
-    max-height: 399px;
 
     @media (max-width: 1200px) {
         width: 48.05%;
@@ -75,12 +74,12 @@ export const HomePicContainer = styled.div`
 export const HomePic = styled.div`
     width: 100%;
     height: 92.48%;
+    max-height: 369px;
     border-radius: 20px;
     border: 1px solid #1C383C;
     overflow: hidden;
 
-    @media (max-width: 1024px) {
-        height: 93.53%;
+    @media (max-width: 1200px) {
         max-height: 279px;
     }
 `
