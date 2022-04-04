@@ -5,7 +5,7 @@ export const FooterSection = styled.footer`
     padding: 80px 0 60px 0;
 
     @media(max-width: 600px) {
-        padding-bottom: 40px;
+        padding: 60px 0;
     }
 `
 export const FooterWrapper = styled.div`
@@ -16,6 +16,10 @@ export const FooterWrapper = styled.div`
 
     @media(max-width: 1024px) {
         width: 84.38%;
+    }
+
+    @media(max-width: 768px) {
+        width: 91.47%;
     }
 `
 export const FooterBlocks = styled.div` 
@@ -42,8 +46,11 @@ export const Block = styled.div`
     order: ${props => props.$order && 3};
 
     @media(max-width: 768px) {
-        border-bottom: 1px solid white;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
+
+        &:nth-of-type(2n){
+            margin-bottom: 40px;
+        }
     }
 `
 export const BlockTitle = styled.h3`
@@ -55,14 +62,19 @@ export const BlockTitle = styled.h3`
     margin-bottom: 40px;
 
     @media(max-width: 425px) {
-        font-size: 36px;
-        line-height: 40px;
+        font-size: 28px;
+        line-height: 33.18px;
+        margin-bottom: 30px;
     }
 `
 export const TextBlock = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+
+    @media(max-width: 425px) {
+        margin-bottom: 20px;
+    }
 `
 export const TextLine = styled.p`
     font-style: normal;
@@ -70,7 +82,7 @@ export const TextLine = styled.p`
     font-size: ${props => props.$size ? '14px' : '18px'};
     line-height: ${props => props.$size ? '17px' : '21px'};
     color: #FFFFFF;
-    margin-bottom: ${props => props.margin ? '10px' : null};
+    //margin-bottom: ${props => props.margin ? '10px' : null};
     margin-right: ${props => props.$right ? '40px' : null};
     white-space: pre-line;
 `
@@ -97,7 +109,15 @@ export const Link = styled.a`
     :hover {
         opacity: 0.8;
     }
+
+    @media(max-width: 768px) {
+        margin-top: 16px;
+    }
 `
 export const FooterBottom = styled.div`
     display: flex;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+    }
 `
