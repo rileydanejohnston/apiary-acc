@@ -6,18 +6,8 @@ import curveArrow from '../images/up-right-arrow.svg';
 import straightArrow from '../images/straight-arrow.svg';
 import mobile180Arrow from '../images/mobile-u-arrow.svg';
 
-export const HowData = {
-  title: 'How it works?',
-  step1: `01.\nRestaurants request reusable\ncontainers via app`,
-  step2: `02.\nDeliver containers\nto restaurants`,
-  step3: `03.\nPick up used containers from users\nvia app`,
-  step4: `04.\nWash containers\nat commercial facility`,
-  highlighter: 'Circular ecosystem',
-  buttonText: 'Work with Us'
-};
-
 export const HowInfo = {
-  title: 'How it works?',
+  title: 'How it works',
   steps: [
     {
       // step wrapper
