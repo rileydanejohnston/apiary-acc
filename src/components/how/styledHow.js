@@ -37,9 +37,13 @@ export const HowTitle = styled.h2`
   }
 
   @media( max-width: 767px) {
-    font-size: 28px;
+    font-size: 36px;
     line-height: 32px;
     margin-bottom: 60px;
+  }
+
+  @media( max-width: 425px) {
+    font-size: 28px;
   }
 `;
 
