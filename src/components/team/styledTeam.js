@@ -16,6 +16,10 @@ export const TeamWrapper = styled.section`
     @media(max-width: 600px) {
         padding-bottom: 60px;
     }
+
+    @media (max-width: 425px) {
+        width: 91.47%;
+    }
 `
 export const TeamTitle = styled(SectionTitle)`
     @media (max-width: 750px) {
