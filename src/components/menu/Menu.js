@@ -1,5 +1,6 @@
 import { headerLinks } from '../../constants/headerConst';
 import { Nav, NavLink, WorkButton, Wrapper } from './styledMenu';
+import uniqueId from 'lodash.uniqueid';
 
 const Menu = (props) => {
 
@@ -9,6 +10,7 @@ const Menu = (props) => {
                 {headerLinks.map((link) => {
                     return (
                         <NavLink
+                            key={uniqueId()}
                             onClick={props.toggleMenu}
                             href={link.id}>
                             {link.name}

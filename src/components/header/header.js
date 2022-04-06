@@ -3,12 +3,12 @@ import logo from '../../images/logo.svg';
 import logoT from '../../images/logoTipped.svg';
 import hamburger from '../../images/hamburger.svg';
 import menuExit from '../../images/menuExit.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { headerLinks } from '../../constants/headerConst';
 import Menu from "../menu/Menu";
 import uniqueId from 'lodash.uniqueid';
 
-const Header = () => {
+const Header = (props) => {
 
     const [image, setImage] = useState(logo);
 
@@ -18,11 +18,15 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     }
 
-    window.addEventListener('resize', function () {
-        if (this.window.innerWidth > 1024) {
-            setMenuOpen(false)
+    useEffect(() => {
+        function checkWindow() {
+            if (window.innerWidth > 1024) {
+                setMenuOpen(false)
+            }
         }
-    });
+        window.addEventListener('resize', checkWindow);
+        return () => window.removeEventListener('resize', checkWindow);
+    })
 
     return (
         <HeaderSection>
@@ -47,7 +51,10 @@ const Header = () => {
                         )
                     })}
                 </HeaderNav>
-                <HeaderWork>Work with us</HeaderWork>
+                <HeaderWork
+                    onClick={props.openPopup}>
+                    Work with us
+                </HeaderWork>
             </HeaderRight>
             {menuOpen &&
                 <Menu
