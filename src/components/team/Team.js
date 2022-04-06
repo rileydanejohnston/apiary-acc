@@ -1,5 +1,5 @@
 import { SectionTitle } from '../sharedComponents/sharedComponents';
-import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamWrapper } from './styledTeam';
+import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamTitle, TeamWrapper } from './styledTeam';
 import { TeamData } from '../../constants/teamConst';
 
 const {
@@ -14,7 +14,7 @@ const Team = () => {
 
     return (
         <TeamWrapper id='team'>
-            <SectionTitle>{teamTitle}</SectionTitle>
+            <TeamTitle>{teamTitle}</TeamTitle>
             <TeamBlocks>
                 {members.map((member) => {
                     return (
@@ -30,7 +30,7 @@ const Team = () => {
                     )
                 })}
             </TeamBlocks>
-            <SectionTitle>{partnersTitle}</SectionTitle>
+            <TeamTitle>{partnersTitle}</TeamTitle>
             <PartnerRow1>
                 {partners1.map((part) => {
                     return (
