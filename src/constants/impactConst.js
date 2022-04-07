@@ -12,7 +12,8 @@ export const ImpactData = {
             text: {
                 line1: 'Save at least 50% on supply cost',
                 line2: 'Save 50-60 hours per week of manager’s labor cost: no inventory management, no reordering, no restocking',
-                line3: 'Save real estate cost for storage'
+                line3: 'Save real estate cost for storage',
+                line4: 'Government helps subsidize Up to 70%'
             }
         },
         {
@@ -25,114 +26,6 @@ export const ImpactData = {
             }
         }
     ],
-    // table: {
-    //     headers: [
-    //         { content: logo },
-    //         {
-    //             content: 'Awesome Container Company',
-    //             color: 'orange'
-    //         },
-    //         { content: 'Deliver Zero' },
-    //         { content: 'Logistics Company' },
-    //         { content: 'Washing Facility' },
-    //         { content: 'Single-use plastics' }
-    //     ],
-    //     rows: [
-    //         [
-    //             {
-    //                 content: 'Save over 50% on supply costs',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Save real estate storage costs',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: dotB },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Inventory management',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Never reorder supplies',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Easy pickup and delivery',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: dotB },
-    //             { content: dotB },
-    //             { content: dotB }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'Sustainable products',
-    //                 left: 'left'
-    //             },
-    //             { content: dotO },
-    //             { content: null },
-    //             { content: null },
-    //             { content: dotB },
-    //             { content: null }
-    //         ],
-    //         [
-    //             {
-    //                 content: 'App for tracking and reporting',
-    //                 border: 'bottom',
-    //                 left: 'left'
-    //             },
-    //             {
-    //                 content: dotO,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: null,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: dotB,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: null,
-    //                 border: 'bottom'
-    //             },
-    //             {
-    //                 content: null,
-    //                 border: 'bottom'
-    //             }
-    //         ]
-    //     ]
-    // },
     table: [
         {
             pic: logo,
@@ -258,6 +151,56 @@ export const ImpactData = {
             bottom: 'bottom',
             right: 'right'
         }
+    ],
+    smallTable: [
+        {
+            pic: logo,
+            top: 'top'
+        },
+        {
+            content: 'Awesome Container Company',
+            color: 'orange',
+            top: 'top'
+        },
+        {
+            content: 'Save over 50% on supply costs',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Inventory management',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Never reorder supplies',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Easy pickup and delivery',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Easy pickup and delivery',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'Sustainable products',
+            left: 'left'
+        },
+        { pic: dotO },
+        {
+            content: 'App for tracking and reporting',
+            bottom: 'bottom',
+            left: 'left'
+        },
+        {
+            pic: dotO,
+            bottom: 'bottom'
+        },
     ]
 
 }
