@@ -1,4 +1,3 @@
-import { SectionTitle } from '../sharedComponents/sharedComponents';
 import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamTitle, TeamWrapper } from './styledTeam';
 import { TeamData } from '../../constants/teamConst';
 

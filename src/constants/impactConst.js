@@ -12,7 +12,8 @@ export const ImpactData = {
             text: {
                 line1: 'Save at least 50% on supply cost',
                 line2: 'Save 50-60 hours per week of manager’s labor cost: no inventory management, no reordering, no restocking',
-                line3: 'Save real estate cost for storage'
+                line3: 'Save real estate cost for storage',
+                line4: 'Government helps subsidize Up to 70%'
             }
         },
         {

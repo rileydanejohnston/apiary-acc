@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Highlight } from "../sharedComponents/sharedComponents";
+import { Highlight, SectionTitle } from "../sharedComponents/sharedComponents";
 
 export const ImpactWrapper = styled.section`
     background: #F4F4F4;
@@ -7,6 +7,18 @@ export const ImpactWrapper = styled.section`
     display: flex;
     flex-direction: column;
     z-index: 0;
+
+    @media (max-width: 600px) {
+        padding: 60px 0 64px;
+    }
+`
+export const ImpactTitle = styled(SectionTitle)`
+    @media (max-width: 600px) {
+        width: 91.47%;
+        margin: auto;
+        font-size: 28px;
+        line-height: 32px;
+    }
 `
 export const BoxWrapper = styled.div`
     display: flex;
@@ -15,17 +27,30 @@ export const BoxWrapper = styled.div`
     justify-content: space-between;
     margin: 60px auto 120px auto;
 
+    @media (max-width: 1025px) {
+        width: 96.1%;  // 984 / 1024
+    }
+
     @media (max-width: 600px) {
         flex-direction: column;
+        margin: 120px auto 80px;
     }
 `
 export const BoxContain = styled.div`
     position: relative;
     width: 48.53%;
 
+    @media (max-width: 1025px) {
+        width: 48.98%;  // 482 / 984
+    }
+
     @media (max-width: 600px) {
-        width: 75%;
-        margin: 0 auto 80px;
+        width: 91.47%;
+        margin: 0 auto 0;
+
+        &:first-of-type {
+            margin: 0 auto 117px;
+        }
     }
 `
 export const Box = styled.div`
@@ -39,7 +64,7 @@ export const Box = styled.div`
     align-items: center;
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+    border-radius: 3px;
 `
 export const ImageWrap = styled.div`
     position: absolute;
@@ -57,11 +82,15 @@ export const ImageWrap = styled.div`
     }
 
     @media (max-width: 900px) {
-        top: -14%;
+        top: -15%;
     }
 
-    @media (max-width: 425px) {
-        top: -10%;
+    @media (max-width: 700px) {
+        top: -12%;
+    }
+
+    @media (max-width: 600px) {
+        top: -15%;
     }
 `
 export const BoxImage = styled.img`
@@ -82,8 +111,12 @@ export const Circles = styled.img`
         top: -12%;
     }
 
-    @media (max-width: 425px) {
-        top: -8%;
+    @media (max-width: 650px) {
+        top: -10%;
+    }
+
+    @media (max-width: 600px) {
+        top: -12%;
     }
 `
 export const BoxTitle = styled(Highlight)`
@@ -120,6 +153,49 @@ export const BoxDiamond = styled.img`
         margin: 15px 0;
     }
 `
+export const GridWrapper = styled.div`
+    width: 100%;
+    overflow-x: scroll;
+    padding-bottom: 28px;
+    display: flex;
+    position: relative;
+
+    @media(max-width: 425px) {
+        margin-left: 15px;
+
+        &::-webkit-scrollbar {
+            width: 20px;
+       }
+     &::-webkit-scrollbar-track {
+        background: #E1E1E1;
+        border-radius: 10px;
+        width: 342px;
+        height: 8px;
+         }
+     &::-webkit-scrollbar-thumb {
+         background: #1C383C;
+         border-radius: 10px;
+         width: 122px;
+         height: 8px;
+        }
+    }
+`
+export const ScrollContainer = styled.div`
+    width: 91.2%;
+    height: 8px;
+    background: #E1E1E1;
+    margin: auto;
+    position: fixed;
+    bottom: 60px;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 15px;
+        height: 15px;
+        border:1px solid black;
+     }
+`
+
 export const Grid = styled.div`
     width: 83.33%; 
     display: grid;
@@ -127,6 +203,7 @@ export const Grid = styled.div`
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(8, 1fr);
     border-radius: 20px;
+    box-sizing: border-box;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 
     @media (max-width: 1024px) {
@@ -134,18 +211,13 @@ export const Grid = styled.div`
     }
 
     @media (max-width: 425px) {
-        display: none;
+        width: 984px;
+        margin: 40px 3px 0;
     }
-`
-export const SmallGrid = styled(Grid)`
-    width: 96.09%;
-    margin: 30px auto 0 auto;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    display: none;
-
-    @media (max-width: 425px) {
-        display: grid;
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 100%;
+        border: 1px solid black;
     }
 `
 export const GridCell = styled.div`
@@ -157,6 +229,10 @@ export const GridCell = styled.div`
     padding: ${props => props.top ? null : '20px'};
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 425px) {
+        width: 163px;
+    }
 `
 export const GridText = styled.p`
     font-size: 18px;
