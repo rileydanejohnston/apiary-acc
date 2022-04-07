@@ -160,15 +160,21 @@ export const GridWrapper = styled.div`
     display: flex;
     position: relative;
 
-    @media(max-width: 425px) {
-        margin-left: 15px;
+    &::-webkit-scrollbar {
+        display: none;
+   }
+
+    @media(max-width: 424px) {
+        padding: 0 16px;
 
         &::-webkit-scrollbar {
+            display: block;
             width: 20px;
        }
      &::-webkit-scrollbar-track {
         background: #E1E1E1;
         border-radius: 10px;
+        margin: 0 16px;
         width: 342px;
         height: 8px;
          }
@@ -179,21 +185,6 @@ export const GridWrapper = styled.div`
          height: 8px;
         }
     }
-`
-export const ScrollContainer = styled.div`
-    width: 91.2%;
-    height: 8px;
-    background: #E1E1E1;
-    margin: auto;
-    position: fixed;
-    bottom: 60px;
-
-    &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 15px;
-        height: 15px;
-        border:1px solid black;
-     }
 `
 
 export const Grid = styled.div`
@@ -212,12 +203,7 @@ export const Grid = styled.div`
 
     @media (max-width: 425px) {
         width: 984px;
-        margin: 40px 3px 0;
-    }
-    &::-webkit-scrollbar {
-        width: 10px;
-        height: 100%;
-        border: 1px solid black;
+        margin: 40px 3px 28px;
     }
 `
 export const GridCell = styled.div`

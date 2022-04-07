@@ -27,22 +27,22 @@ const App = () => {
 
   return (
     <AppWrapper>
-      <Header
+      {/* <Header
         openPopup={openPopup} />
       <Home />
       <Problem />
       <Sustainable />
       <How
-        openPopup={openPopup} />
+        openPopup={openPopup} /> */}
       <Impact />
       <Esg />
-      <Price
+      {/* <Price
         openPopup={openPopup} />
       <Team />
       <Footer />
       <Form
         open={popupOpen}
-        closePopup={closePopup} />
+        closePopup={closePopup} /> */}
     </AppWrapper>
   );
 }
