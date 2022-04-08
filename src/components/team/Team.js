@@ -1,4 +1,4 @@
-import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamTitle, TeamWrapper } from './styledTeam';
+import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, PartnerWrapper, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamTitle, TeamWrapper } from './styledTeam';
 import { TeamData } from '../../constants/teamConst';
 import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const {
@@ -35,25 +35,32 @@ const Team = () => {
                     )
                 })}
             </TeamBlocks>
-            <TeamTitle>{partnersTitle}</TeamTitle>
-            <PartnerRow1>
-                {partners1.map((part) => {
-                    return (
-                        <PartnerLink href={part.link} target='_blank'>
-                            <Partner src={part.image} />
-                        </PartnerLink>
-                    )
-                })}
-            </PartnerRow1>
-            <PartnerRow2>
-                {partners2.map((part) => {
-                    return (
-                        <PartnerLink href={part.link} target='_blank'>
-                            <Partner src={part.image} />
-                        </PartnerLink>
-                    )
-                })}
-            </PartnerRow2>
+            <PartnerWrapper
+                initial={initial}
+                whileInView={whileInView}
+                viewport={viewport}
+                transition={transition}
+            >
+                <TeamTitle>{partnersTitle}</TeamTitle>
+                <PartnerRow1>
+                    {partners1.map((part) => {
+                        return (
+                            <PartnerLink href={part.link} target='_blank'>
+                                <Partner src={part.image} />
+                            </PartnerLink>
+                        )
+                    })}
+                </PartnerRow1>
+                <PartnerRow2>
+                    {partners2.map((part) => {
+                        return (
+                            <PartnerLink href={part.link} target='_blank'>
+                                <Partner src={part.image} />
+                            </PartnerLink>
+                        )
+                    })}
+                </PartnerRow2>
+            </PartnerWrapper>
         </TeamWrapper>
     )
 }

@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
+import { motion } from "framer-motion";
 
-export const CarouselWrapper = styled.div`
+export const CarouselWrapper = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;

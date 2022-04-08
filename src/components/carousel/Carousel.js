@@ -14,6 +14,7 @@ import {
   ButtonWrapper,
 } from './styledCarousel'
 import uniqueId from 'lodash.uniqueid'
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 
 const Carousel = () => {
 
@@ -42,7 +43,12 @@ const Carousel = () => {
   }, [emblaApi]);
 
   return (
-    <CarouselWrapper >
+    <CarouselWrapper
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       { /* scroll buttons appear on sides of carousel at large screen sizes */}
       <ButtonWrapper>
         <CarouselButton image={arrowLeft} onClick={scrollPrev} />

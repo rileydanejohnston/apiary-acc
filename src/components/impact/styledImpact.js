@@ -21,7 +21,7 @@ export const ImpactTitle = styled(SectionTitle)`
         line-height: 32px;
     }
 `
-export const BoxWrapper = styled.div`
+export const BoxWrapper = styled(motion.div)`
     display: flex;
     position: relative;
     width: 94.44%;
@@ -154,7 +154,7 @@ export const BoxDiamond = styled.img`
         margin: 15px 0;
     }
 `
-export const GridWrapper = styled.div`
+export const GridWrapper = styled(motion.div)`
     width: 100%;
     overflow-x: scroll;
     padding-bottom: 28px;

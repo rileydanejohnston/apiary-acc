@@ -1,6 +1,6 @@
 export const initial = {
   opacity: 0,
-  y: 50
+  y: -25,
 };
 
 export const whileInView = {
@@ -13,5 +13,6 @@ export const viewport = {
 };
 
 export const transition = {
-  duration: 1
+  duration: 1,
+  delay: .3
 };

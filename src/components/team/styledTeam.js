@@ -84,6 +84,9 @@ export const Link = styled.a`
     margin: 21px auto 0 auto;
     cursor: pointer;
 `
+
+export const PartnerWrapper = styled(motion.div)``;
+
 export const PartnerRow1 = styled.div`
     width: 100%;
     display: flex;

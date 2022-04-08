@@ -25,7 +25,12 @@ const Impact = () => {
             transition={transition}
         >
             <ImpactTitle>Impact</ImpactTitle>
-            <BoxWrapper>
+            <BoxWrapper
+                initial={initial}
+                whileInView={whileInView}
+                viewport={viewport}
+                transition={transition}
+            >
                 {boxes.map(({ id, title, text }) => {
                     return (
                         <BoxContain key={id}>
@@ -59,8 +64,13 @@ const Impact = () => {
                 }
             </BoxWrapper>
             <ImpactTitle>The competition is no match</ImpactTitle>
-            <GridWrapper>
-                <Grid>
+            <GridWrapper
+                initial={initial}
+                whileInView={whileInView}
+                viewport={viewport}
+                transition={transition}
+            >
+                <Grid id='impact'>
                     {table.map((cell) => {
                         if (cell.hasOwnProperty('pic')) {
                             return (
