@@ -45,6 +45,11 @@ export const Exit = styled.img`
     :hover {
         opacity: 0.7;
     }
+
+    @media (max-width: 500px) {
+        top: 15px;
+        right: 15px;
+    }
 `
 export const Title = styled.h3`
     width: 78.95%;
