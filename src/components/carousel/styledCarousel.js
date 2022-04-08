@@ -43,7 +43,7 @@ export const CarouselButton = styled.button`
   width: 24px;
   height: 24px;
   border: none;
-  background: url(${props => props.image});
+  background: center / contain no-repeat url(${props => props.image});
   transition: transform .2s;
 
   &:hover {
