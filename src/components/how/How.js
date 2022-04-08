@@ -10,6 +10,7 @@ import {
 import { HowInfo } from '../../constants/howConst'
 import Step from '../step/Step';
 import uniqueId from 'lodash.uniqueid';
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const {
   title,
   steps,
@@ -20,7 +21,12 @@ const {
 const How = (props) => {
 
   return (
-    <HowWrapper>
+    <HowWrapper
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       <HowContent>
         <HowTitle>{title}</HowTitle>
         <StepsWrapper>

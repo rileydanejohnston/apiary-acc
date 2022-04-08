@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const FooterSection = styled.footer`
+export const FooterSection = styled(motion.footer)`
     background: #1C383C;
     padding: 80px 0 60px 0;
 

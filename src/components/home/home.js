@@ -5,11 +5,17 @@ import handle from '../../images/sliderHandle.svg';
 import ReactCompareImage from 'react-compare-image';
 import Animation from "../animation/Animation";
 import React from "react";
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 
 const Home = () => {
 
     return (
-        <HomeSection>
+        <HomeSection
+            initial={initial}
+            whileInView={whileInView}
+            viewport={viewport}
+            transition={transition}
+        >
             <Title>Help our environment by eliminating single-use plastics from your delivery with
                 <TitleSpan> Awesome Container Company</TitleSpan>
             </Title>

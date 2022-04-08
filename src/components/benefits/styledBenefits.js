@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
+import { motion } from "framer-motion";
 
-export const BenefitsSection = styled.div`
+export const BenefitsSection = styled(motion.div)`
   height: 751px;       /* 871px (slide to next section) - 120px (padding) */
   margin: 0 auto;
   position: relative;

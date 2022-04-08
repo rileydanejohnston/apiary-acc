@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
 import PercentImg from '../../images/plastic-percents.svg'
+import { motion } from "framer-motion";
 
-export const ProblemWrapper = styled.section`
+export const ProblemWrapper = styled(motion.section)`
   padding: 120px 0;
   background: #1C383C;
 

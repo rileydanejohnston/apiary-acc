@@ -8,11 +8,17 @@ import {
 } from './styledEsg'
 import { EsgData } from '../../constants/esgConst'
 import { Highlight } from '../sharedComponents/sharedComponents';
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const { title, subtitle1, subtitle2, highlight } = EsgData;
 
 const Esg = () => {
   return (
-    <EsgWrapper>
+    <EsgWrapper
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       <EsgContent>
         <EsgImage />
         <EsgTitle>{title}</EsgTitle>

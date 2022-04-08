@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Highlight, SectionTitle } from "../sharedComponents/sharedComponents";
+import { motion } from "framer-motion";
 
-export const ImpactWrapper = styled.section`
+export const ImpactWrapper = styled(motion.section)`
     background: #F4F4F4;
     padding: 120px 0;
     display: flex;

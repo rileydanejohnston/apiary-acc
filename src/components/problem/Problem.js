@@ -16,6 +16,7 @@ import {
 import { ProblemData } from '../../constants/problem'
 import uniqueId from 'lodash.uniqueid';
 import { Highlight } from '../sharedComponents/sharedComponents';
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const {
   statTitle,
   wasteStat,
@@ -25,9 +26,16 @@ const {
   images
 } = ProblemData;
 
+
 const Problem = () => {
   return (
-    <ProblemWrapper id='problem'>
+    <ProblemWrapper
+      id='problem'
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       <Grid>
         <CircleCell>
           <CircleTitle>{statTitle}</CircleTitle>

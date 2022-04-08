@@ -1,8 +1,9 @@
 import styled from "styled-components/macro";
 import { WorkWithUs } from '../sharedComponents/sharedComponents';
 import { Highlight } from '../sharedComponents/sharedComponents'
+import { motion } from "framer-motion";
 
-export const HowWrapper = styled.section`
+export const HowWrapper = styled(motion.section)`
   padding: 80px 0 100px 0;
 
   @media( max-width: 1023px) {

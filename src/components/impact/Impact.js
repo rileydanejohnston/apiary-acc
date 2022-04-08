@@ -5,6 +5,7 @@ import rectleft from '../../images/rectleft.svg';
 import rectmiddle from '../../images/rectmiddle.svg';
 import rectright from '../../images/rectright.svg';
 import circles from '../../images/circles.svg';
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 
 
 const {
@@ -16,7 +17,13 @@ const {
 const Impact = () => {
 
     return (
-        <ImpactWrapper id='impact'>
+        <ImpactWrapper
+            id='impact'
+            initial={initial}
+            whileInView={whileInView}
+            viewport={viewport}
+            transition={transition}
+        >
             <ImpactTitle>Impact</ImpactTitle>
             <BoxWrapper>
                 {boxes.map(({ id, title, text }) => {

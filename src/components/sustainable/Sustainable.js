@@ -9,15 +9,23 @@ import {
 import { SustainableData } from '../../constants/sustainableConstants'
 import Carousel from '../carousel/Carousel'
 import Benefits from '../benefits/Benefits'
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const {
   title,
   subtitle,
 } = SustainableData
 
+
+
 const Sustainable = () => {
 
   return (
-    <SustainableWrapper>
+    <SustainableWrapper
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       <TitlesGroup>
         <Title>{title}</Title>
         <Subtitle>

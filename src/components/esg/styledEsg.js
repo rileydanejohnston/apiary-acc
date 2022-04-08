@@ -1,7 +1,8 @@
 import styled from "styled-components/macro";
 import esgImg from '../../images/esgContainer.svg';
+import { motion } from "framer-motion";
 
-export const EsgWrapper = styled.section`
+export const EsgWrapper = styled(motion.section)`
   padding: 60px 0 240px 0;
 
   @media( max-width: 1280px) {

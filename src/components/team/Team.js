@@ -1,6 +1,6 @@
 import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamTitle, TeamWrapper } from './styledTeam';
 import { TeamData } from '../../constants/teamConst';
-
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const {
     teamTitle,
     members,
@@ -12,7 +12,13 @@ const {
 const Team = () => {
 
     return (
-        <TeamWrapper id='team'>
+        <TeamWrapper
+            id='team'
+            initial={initial}
+            whileInView={whileInView}
+            viewport={viewport}
+            transition={transition}
+        >
             <TeamTitle>{teamTitle}</TeamTitle>
             <TeamBlocks>
                 {members.map((member) => {
