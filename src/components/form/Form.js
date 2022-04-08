@@ -123,7 +123,7 @@ const Form = (props) => {
 
     const formRequest = 'entry.1763891937';
 
-    const formURL = 'https://docs.google.com/forms/d/18EfQ-4I_6IffAlGivd0wxGbebGZ1REUGuVuJe4_YvgE/formResponse';
+    const formURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdtthL0RFzEPmluPWOCC6s4rCsmWCBtu0xvf2r0OJ2g5GCvFw/formResponse'
 
     let submittedForm = false;
     let hiddenFrameLoaded = false;
@@ -136,8 +136,19 @@ const Form = (props) => {
         }
     }
 
-    const submitForm = () => {
-        setSubmitted(true);
+    const submitForm = (event) => {
+        const formData = {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                'entry.1259736291': inputs.name,
+                'entry.1503900032': inputs.email,
+                'entry.1763891937': inputs.message
+            })
+        }
+        return fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSdtthL0RFzEPmluPWOCC6s4rCsmWCBtu0xvf2r0OJ2g5GCvFw/formResponse', formData)
+            .then(res => setSubmitted(true))
     }
 
     return (
@@ -171,7 +182,8 @@ const Form = (props) => {
                             target='hidden_iframe'
                             action={formURL}
                             method='POST'
-                            onSubmit={submitForm}>
+                            onSubmit={submitForm}
+                        >
                             <InputWrap>
                                 <Label
                                     $valid={nameValid}>
