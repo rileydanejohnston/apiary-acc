@@ -2,8 +2,9 @@ import styled from "styled-components/macro";
 import priceImg from '../../images/price-img.svg';
 import mobilePriceImg from '../../images/mobile-price-img.svg';
 import { WorkWithUs } from "../sharedComponents/sharedComponents";
+import { motion } from "framer-motion";
 
-export const PriceWrapper = styled.section`
+export const PriceWrapper = styled(motion.section)`
   padding: 0 0 240px 0;
 
   @media( max-width: 1023px) {

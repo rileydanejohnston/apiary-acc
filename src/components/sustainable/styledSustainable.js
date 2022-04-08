@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
+import { motion } from "framer-motion";
 
-export const SustainableWrapper = styled.section`
+export const SustainableWrapper = styled(motion.section)`
   padding: 120px 0;
   background: #F4F4F4;
 

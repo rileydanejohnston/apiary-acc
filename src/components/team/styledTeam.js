@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import linkedin from '../../images/linkedin.svg';
 import { SectionTitle } from "../sharedComponents/sharedComponents";
+import { motion } from "framer-motion";
 
-export const TeamWrapper = styled.section`
+export const TeamWrapper = styled(motion.section)`
     display: flex;
     flex-direction: column;
     width: 53.61%;  // 772/1440
@@ -83,6 +84,9 @@ export const Link = styled.a`
     margin: 21px auto 0 auto;
     cursor: pointer;
 `
+
+export const PartnerWrapper = styled(motion.div)``;
+
 export const PartnerRow1 = styled.div`
     width: 100%;
     display: flex;

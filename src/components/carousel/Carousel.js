@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import arrowLeft from '../../images/arrow-left.svg'
 import arrowRight from '../../images/arrow-right.svg'
-import { CarouselData } from '../../constants/carouselConst'
+import { CarouselData, CarouselSettings } from '../../constants/carouselConst'
 import Slide from '../slide/Slide'
 import useEmblaCarousel from 'embla-carousel-react';
 import {
@@ -14,6 +14,7 @@ import {
   ButtonWrapper,
 } from './styledCarousel'
 import uniqueId from 'lodash.uniqueid'
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 
 const Carousel = () => {
 
@@ -22,10 +23,7 @@ const Carousel = () => {
 
   // loop: if you're on slide 3/3, clicking next goes to 1/3
   // default speed is 10
-  useEmblaCarousel.globalOptions = { 
-    loop: true,
-    speed: 8,
-  }
+  useEmblaCarousel.globalOptions = {...CarouselSettings};
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) {
@@ -42,7 +40,12 @@ const Carousel = () => {
   }, [emblaApi]);
 
   return (
-    <CarouselWrapper >
+    <CarouselWrapper
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       { /* scroll buttons appear on sides of carousel at large screen sizes */}
       <ButtonWrapper>
         <CarouselButton image={arrowLeft} onClick={scrollPrev} />

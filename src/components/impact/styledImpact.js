@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { Highlight, SectionTitle } from "../sharedComponents/sharedComponents";
+import { motion } from "framer-motion";
 
-export const ImpactWrapper = styled.section`
+export const ImpactWrapper = styled(motion.section)`
     background: #F4F4F4;
     padding: 120px 0;
     display: flex;
@@ -20,7 +21,7 @@ export const ImpactTitle = styled(SectionTitle)`
         line-height: 32px;
     }
 `
-export const BoxWrapper = styled.div`
+export const BoxWrapper = styled(motion.div)`
     display: flex;
     position: relative;
     width: 94.44%;
@@ -153,7 +154,7 @@ export const BoxDiamond = styled.img`
         margin: 15px 0;
     }
 `
-export const GridWrapper = styled.div`
+export const GridWrapper = styled(motion.div)`
     width: 100%;
     overflow-x: scroll;
     padding-bottom: 28px;

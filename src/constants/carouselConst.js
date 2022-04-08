@@ -2,6 +2,12 @@ import container0 from '../images/container-0.png'
 import container1 from '../images/container-1.png'
 import container2 from '../images/container-2.png'
 
+// https://www.embla-carousel.com/api/options/
+export const CarouselSettings = {
+  loop: true,
+  speed: 8,
+}
+
 export const CarouselData = [
   {
     image: container0,

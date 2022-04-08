@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { WorkWithUs } from '../sharedComponents/sharedComponents';
 import smallLogo from '../../images/smallLogo.svg';
+import { motion } from 'framer-motion';
 
-export const HeaderSection = styled.header`
+export const HeaderSection = styled(motion.header)`
     height: 80px;
     display: flex;
     justify-content: space-between;

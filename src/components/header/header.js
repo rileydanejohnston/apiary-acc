@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { headerLinks } from '../../constants/headerConst';
 import Menu from "../menu/Menu";
 import uniqueId from 'lodash.uniqueid';
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 
 const Header = (props) => {
 
@@ -29,7 +30,12 @@ const Header = (props) => {
     })
 
     return (
-        <HeaderSection>
+        <HeaderSection
+            initial={initial}
+            whileInView={whileInView}
+            viewport={viewport}
+            transition={transition}
+        >
             <HeaderLeft>
                 <HeaderLogo
                     image={image}

@@ -6,14 +6,22 @@ import {
   BenefitGroup,
 } from './styledBenefits'
 import { SustainableData } from '../../constants/sustainableConstants'
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const { logisticData, supplyData, storageData } = SustainableData
 const { logisticsImg, logisticsText, logisticsTextWidth, logisticsSize, logisticsPosition } = logisticData
 const { supplyImg, supplyText, supplyTextWidth, supplySize, supplyPosition } = supplyData
 const { storageImg, storageText, storageTextWidth, storageSize, storagePosition } = storageData
 
+
+
 const Benefits = () => {
   return (
-    <BenefitsSection>
+    <BenefitsSection
+      initial={initial}
+      whileInView={whileInView}
+      viewport={viewport}
+      transition={transition}
+    >
       <BenefitGroup position={logisticsPosition}>
         <Image
           img={logisticsImg}

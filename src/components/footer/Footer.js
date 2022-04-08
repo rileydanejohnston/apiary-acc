@@ -1,7 +1,7 @@
 import { FooterSection, Block, BlockTitle, FooterBlocks, FooterBottom, FooterWrapper, ImgBackground, Link, LinkImg, LinkWrapper, TextBlock, TextLine } from "./styledFooter"
 import { FooterData } from '../../constants/footerConst';
 import uniqueId from 'lodash.uniqueid';
-
+import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
 const {
     blocks,
     links
@@ -10,7 +10,13 @@ const {
 const Footer = () => {
 
     return (
-        <FooterSection id='contacts'>
+        <FooterSection
+            id='contacts'
+            initial={initial}
+            whileInView={whileInView}
+            viewport={viewport}
+            transition={transition}
+        >
             <FooterWrapper>
                 <FooterBlocks>
                     {blocks.map((data) => {

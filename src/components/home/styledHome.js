@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const HomeSection = styled.section`
+export const HomeSection = styled(motion.section)`
     display: flex;
     flex-direction: column;
     width: 94%;
