@@ -1,6 +1,8 @@
 import { Link, Partner, PartnerLink, PartnerRow1, PartnerRow2, PartnerWrapper, TeamBlock, TeamBlocks, TeamImage, TeamText, TeamTitle, TeamWrapper } from './styledTeam';
 import { TeamData } from '../../constants/teamConst';
 import { initial, whileInView, viewport, transition } from '../../constants/animateRevealConst';
+import uniqueId from 'lodash.uniqueid';
+
 const {
     teamTitle,
     members,
@@ -24,7 +26,7 @@ const Team = () => {
                 {members.map((member) => {
                     return (
                         <TeamBlock
-                            key={members.indexOf(member)}>
+                            key={uniqueId()}>
                             <TeamImage src={member.image} />
                             <TeamText>{member.name}</TeamText>
                             <TeamText>{member.role}</TeamText>
@@ -45,7 +47,9 @@ const Team = () => {
                 <PartnerRow1>
                     {partners1.map((part) => {
                         return (
-                            <PartnerLink href={part.link} target='_blank'>
+                            <PartnerLink
+                                key={uniqueId()}
+                                href={part.link} target='_blank'>
                                 <Partner src={part.image} />
                             </PartnerLink>
                         )
@@ -54,7 +58,9 @@ const Team = () => {
                 <PartnerRow2>
                     {partners2.map((part) => {
                         return (
-                            <PartnerLink href={part.link} target='_blank'>
+                            <PartnerLink
+                                key={uniqueId()}
+                                href={part.link} target='_blank'>
                                 <Partner src={part.image} />
                             </PartnerLink>
                         )
