@@ -14,5 +14,5 @@ export const viewport = {
 
 export const transition = {
   duration: 1,
-  delay: .3
+  delay: .2
 };
