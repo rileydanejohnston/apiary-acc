@@ -21,6 +21,7 @@ const Sustainable = () => {
 
   return (
     <SustainableWrapper
+      id='solution'
       initial={initial}
       whileInView={whileInView}
       viewport={viewport}
