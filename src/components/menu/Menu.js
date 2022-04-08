@@ -19,6 +19,7 @@ const Menu = (props) => {
                 })}
             </Nav>
             <WorkButton
+                onClick={props.openPopup}
             >Work with us</WorkButton>
         </Wrapper>
     )

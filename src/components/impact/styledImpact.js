@@ -163,6 +163,7 @@ export const GridWrapper = styled(motion.div)`
 
     &::-webkit-scrollbar {
         display: none;
+        -webkit-appearance: none;
    }
 
     @media(max-width: 424px) {

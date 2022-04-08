@@ -11,7 +11,7 @@ export const Overlay = styled.section`
     justify-content: center;
     align-items: center;
     background-color:rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 4;
     opacity: ${props => props.open ? '1' : '0'};
     visibility: ${props => props.open ? 'visible' : 'hidden'};
     transition: visibility 1s, opacity 1s ease;
@@ -27,6 +27,11 @@ export const Wrapper = styled.div`
     border-radius: 3px;
     background: white;
     align-items: center;
+
+    @media (max-width: 500px) {
+        height: 620px;
+        padding: 40px 0 20px;
+    }
 `
 export const Exit = styled.img`
     width: 16.5px;
@@ -50,6 +55,11 @@ export const Title = styled.h3`
     white-space: pre-line;
     margin-bottom: 50px;
     text-align: ${props => props.$thanks ? 'center' : 'left'};
+
+    @media (max-width: 500px) {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
 `
 export const ConnectForm = styled.form`
     width: 78.95%; // 600/760
@@ -62,6 +72,10 @@ export const InputWrap = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+
+    @media (max-width: 500px) {
+        margin-bottom: 25px;
+    }
 `
 export const Label = styled.label`
     font-style: normal;
@@ -70,6 +84,10 @@ export const Label = styled.label`
     line-height: 17px;
     margin-bottom: 11px;
     color: ${props => props.$valid ? 'inherit' : '#E30613'}
+
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
 `
 export const Input = styled.input`
     width: 100%;
@@ -85,6 +103,12 @@ export const Input = styled.input`
     font-weight: 400;
     font-size: 18px;
     line-height: 1.11;
+
+    @media (max-width: 500px) {
+        height: 45px;
+        padding: 10px;
+        font-size: 14px;
+    }
 `
 export const TextArea = styled.textarea`
     width: 100%;
@@ -101,6 +125,12 @@ export const TextArea = styled.textarea`
     padding: 20px;
     outline: none;
     resize: none;
+
+    @media (max-width: 500px) {
+        height: 120px;
+        font-size: 14px;
+        padding: 10px;
+    }
 `
 export const Submit = styled(WorkWithUs)`
     width: 116px;
@@ -110,6 +140,12 @@ export const Submit = styled(WorkWithUs)`
     line-height: 28px;
     border-radius: 0;
     opacity: ${props => props.valid ? '1' : '0.5'};
+
+    @media (max-width: 500px) {
+        width: 100px;
+        height: 50px;
+        font-size: 18px;
+    }
 `
 export const Iframe = styled.iframe`
     display: none;

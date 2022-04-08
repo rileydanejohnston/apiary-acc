@@ -64,6 +64,7 @@ const Header = (props) => {
             </HeaderRight>
             {menuOpen &&
                 <Menu
+                    openPopup={props.openPopup}
                     toggleMenu={toggleMenu} />
             }
         </HeaderSection>
